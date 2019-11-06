@@ -1,0 +1,54 @@
+
+.section-four {
+    width: 100%;
+    height: 732px;
+}
+
+.container {
+    width: 1170px;
+  margin: 0 auto;
+  display: flex;
+  position: relative;
+}
+
+.text-container {
+    width: 580px;
+    padding-top: 150px;
+}
+.text {
+    font-size: 15px;
+    line-height: 30px;
+    color: #888888;
+}
+.text-title{
+    font-size: 45px;
+    line-height: 25px;
+}
+
+.button {
+    width: 145px;
+    height: 47px;
+    border: none;
+    background-color: #82f4d3;
+    font-size: 15px;
+    position: relative;
+  }
+  
+  .button-border {
+    width: 145px;
+    height: 47px;
+    border: 1px solid #82f4d3;
+    position: relative;
+    bottom: 58px; left: -12px;
+  }
+  
+  .button-container {
+    position: absolute;
+    top: 400px;
+  }
+
+  .container-img {
+      position: absolute;
+     left: 700px; 
+      
+  }
