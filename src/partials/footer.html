@@ -3,12 +3,17 @@
 
     <div class="footer-wrapper">
       <nav class="footer-nav">
-        <a class="footer-nav__logo" href="#">Shoe Shop</a>
+        <!-- <a class="footer-nav__logo" href="#">Shoe Shop</a> -->
+        <a href="#" class="footer-nav__logo">
+          <img src="../img/shopping-cart.svg" alt="">Sho<span class="logo-letter">e</span>Shop
+        </a>
         <ul class="footer-nav__list">
-          <li><a class="footer-nav__link" href="">Home</a></li>
-          <li><a class="footer-nav__link" href="">Man</a></li>
-          <li><a class="footer-nav__link" href="">Woman</a></li>
-          <li><a class="footer-nav__link" href="">About</a></li>
+          <li><a class="footer-nav__link" href="index.html">Home</a></li>
+          <li><a class="footer-nav__link" href="categories.html">Men</a></li>
+          <li><a class="footer-nav__link" href="categories.html">Women</a></li>
+          <li><a class="footer-nav__link" href="categories.html">Kids</a></li>
+          <li><a class="footer-nav__link" href="about.html">About</a></li>
+          <li><a class="footer-nav__link" href="admin-products.html">Admin</a></li>
         </ul>
       </nav>
 
@@ -19,17 +24,30 @@
           <button class="form-submit__button">Submit</button>
         </form>
         <ul class="footer-icons">
-          <li class="footer-icons__item"><a href="#"></a></li>
-          <li class="footer-icons__item"><a href="#"></a></li>
-          <li class="footer-icons__item"><a href="#"></a></li>
-          <li class="footer-icons__item"><a href="#"></a></li>
+          <svg class="footer-icons__svg">
+            <use xlink:href="../img/sprite_footer.svg#twitter"></use>
+          </svg>
+          <svg class="footer-icons__svg">
+            <use xlink:href="../img/sprite_footer.svg#facebook"></use>
+          </svg>
+          <svg class="footer-icons__svg">
+            <use xlink:href="../img/sprite_footer.svg#instagram"></use>
+          </svg>
+          <svg class="footer-icons__svg">
+            <use xlink:href="../img/sprite_footer.svg#pinterest"></use>
+          </svg>
         </ul>
       </div>
     </div>
 
     <div class="footer-info">
-      <span>Ⓒ Copyrights 2017. Shoe Shop by VictorThemes</span>
-      <span>Contact Us</span>
+      <div><span>© 2019 Nike, Inc. All Rights Reserved</span></div>
+      <div>
+        <span class="footer-info__span">Guides</span>
+        <span class="footer-info__span">Terms of Use</span>
+        <span class="footer-info__span">Terms of Sale</span>
+        <span class="footer-info__span">Privacy Policy</span>
+      </div>
     </div>
 
   </div>

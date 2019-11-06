@@ -1,105 +1,197 @@
 * {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-  }
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-  img {
-	display: block;
-	max-width: 100%;
-	height: auto;
-  }
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 
-  html {
-	box-sizing: border-box;
-  }
+html {
+  box-sizing: border-box;
+}
 
-  *,
-  *::before,
-  *::after {
-	margin: 0;
-	padding: 0;
-	box-sizing: inherit;
-  }
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
 
-  a {
-	text-decoration: none;
-  }
+a {
+  text-decoration: none;
+}
 
-  ul {
-	list-style: none;
-  }
+ul {
+  list-style: none;
+}
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-	margin: 0;
-  }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
 
-  // -----------------------------------------------
+// -----------------------------------------------
 
-  .wrapper {
-	margin: 0 auto;
-	width: 1170px;
-	// background: #ffffff;
-  }
+.wrapper {
+  margin: 0 auto;
+  width: 1170px;
+}
 
-  .footer-wrapper {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+.footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-  }
+.page-footer {
+	padding-top: 50px;
+}
 
-  .footer-nav {
-	height: 250px;
-	//   background: #203888;
-	display: flex;
-	align-items: center;
-	padding-left: 290px;
+.footer-nav {
+  height: 250px;
+  display: flex;
+  padding-left: 290px;
 
-	position: relative;
-  }
+  position: relative;
+}
 
-  .footer-nav__logo {
+.footer-nav__link:hover {
+	color: $green-color;
+}
+
+.footer-nav__logo {
   position: absolute;
   left: 0;
-  top: 100px;
+  top: 0;
 
-  padding-left: 45px;
-  }
+  display: flex;
+  align-items: center;
+  text-decoration: none;
 
-  // form---------------
-  .form__title {
-	font-size: 15px;
-  }
+  width: 176px;
+  height: 36px;
 
-  .form-submit__button {
-	font-size: 15px;
-	color: black;
-	height: 50px;
-	width: 150px;
-	background: #82f4d3;
-	border: none;
-	cursor: pointer;
-  }
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+  color: #82F4D2;
+}
 
-  .form-submit__input {
-	width: 306px;
-	height: 50px;
-	border: none;
-	font-size: 15px;
-	box-shadow: 0px 0px 20px 10px #f8f8f8;
-  }
+.footer-nav__logo img {
+  display: inline-block;
+  width: 36px;
+  height: 40px;
 
-  .footer-info {
-	height: 70px;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	background: #ffffff;
-	border-top: 2px solid #f8f8f8;
-  }
+  margin-right: 5px;
+}
+
+.footer-nav__link {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  line-height: 25px;
+  font-weight: 400;
+  color: #888888;
+}
+
+.logo-letter {
+  color: #000000;
+  margin-right: 5px;
+}
+
+// form---------------
+.form {
+  height: 250px;
+}
+
+.form__title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  line-height: 25px;
+  font-weight: 400;
+  color: #888888;
+}
+
+.form-submit__button {
+  font-family: 'Poppins', sans-serif;
+  line-height: 30px;
+  font-weight: 400;
+  font-size: 15px;
+  color: black;
+  height: 50px;
+  width: 150px;
+  background: #82f4d3;
+  border: none;
+  cursor: pointer;
+}
+
+.form-submit__input {
+  width: 306px;
+  height: 50px;
+  border: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 400;
+  color: #000000;
+  box-shadow: 0px 0px 20px 10px #f8f8f8;
+
+  padding-left: 30px;
+}
+
+.form-submit__input::placeholder {
+  color: #dddddd;
+}
+
+.footer-info {
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  border-top: 1px solid #cccccc;
+}
+
+.form__title {
+  color: #888888;
+  margin-bottom: 33px;
+}
+
+.footer-info>div>span {
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  line-height: 17px;
+  font-weight: 400;
+  color: #888888;
+}
+
+.footer-icons {
+  margin-top: 30px;
+}
+
+.footer-icons__svg {
+  height: 20px;
+  width: 20px;
+  fill: #bbbbbb;
+}
+
+.footer-info__span,
+.footer-icons__svg:not(:last-child) {
+  margin-right: 35px;
+}
+
+.footer-info__span:hover {
+  color: #000000;
+}
+
+.footer-icons__svg:hover {
+  fill: $green-color;
+}
