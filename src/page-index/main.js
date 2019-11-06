@@ -1,5 +1,6 @@
 import '../scss/main.scss';
-import './page.scss'
+import './page.scss';
+import '../js/cart.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   console.log('DOMContentLoaded', 'page-index')
