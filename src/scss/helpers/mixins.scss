@@ -1,0 +1,42 @@
+@mixin box-sizing($type)
+ {
+ -webkit-box-sizing:$type;
+ -moz-box-sizing:$type;
+ box-sizing:$type;
+ }
+
+@mixin flex($type: 'all') {
+  display: flex;
+
+  @if $type=='all' {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @else if $type=='hor' {
+    justify-content: center;
+  }
+
+  @else if $type=='ver' {
+    align-items: center;
+  }
+
+  @else if $type=='arround' {
+    justify-content: space-around;
+  }
+
+  @else if $type=='between' {
+    justify-content: space-between;
+  }
+}
+
+@mixin center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin column {
+  display: flex;
+  flex-direction: column;
+}
