@@ -1,0 +1,26 @@
+html {
+  @include box-sizing(border-box);
+}
+
+*,
+*::before,
+*::after {
+  @include box-sizing(inherit);
+}
+
+* {
+  @extend %global;
+}
+
+img {
+  @extend %img;
+}
+
+body {
+  font-family: $text-font;
+  font-size: $text-size;
+}
+
+.container {
+  @extend %container;
+}
