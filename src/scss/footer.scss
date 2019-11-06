@@ -3,17 +3,17 @@
 	margin: 0;
 	padding: 0;
   }
-  
+
   img {
 	display: block;
 	max-width: 100%;
 	height: auto;
   }
-  
+
   html {
 	box-sizing: border-box;
   }
-  
+
   *,
   *::before,
   *::after {
@@ -21,15 +21,15 @@
 	padding: 0;
 	box-sizing: inherit;
   }
-  
+
   a {
 	text-decoration: none;
   }
-  
+
   ul {
 	list-style: none;
   }
-  
+
   h1,
   h2,
   h3,
@@ -38,45 +38,45 @@
   h6 {
 	margin: 0;
   }
-  
+
   // -----------------------------------------------
-  
+
   .wrapper {
 	margin: 0 auto;
 	width: 1170px;
-	background: #ffffff;
+	// background: #ffffff;
   }
-  
+
   .footer-wrapper {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-  
+
   }
-  
+
   .footer-nav {
 	height: 250px;
 	//   background: #203888;
 	display: flex;
 	align-items: center;
 	padding-left: 290px;
-  
+
 	position: relative;
   }
-  
+
   .footer-nav__logo {
   position: absolute;
   left: 0;
   top: 100px;
-  
+
   padding-left: 45px;
   }
-  
+
   // form---------------
   .form__title {
 	font-size: 15px;
   }
-  
+
   .form-submit__button {
 	font-size: 15px;
 	color: black;
@@ -86,7 +86,7 @@
 	border: none;
 	cursor: pointer;
   }
-  
+
   .form-submit__input {
 	width: 306px;
 	height: 50px;
@@ -94,7 +94,7 @@
 	font-size: 15px;
 	box-shadow: 0px 0px 20px 10px #f8f8f8;
   }
-  
+
   .footer-info {
 	height: 70px;
 	display: flex;
