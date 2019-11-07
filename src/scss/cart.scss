@@ -1,0 +1,140 @@
+.cart__tag {
+    position: fixed;
+    transition: 1s;
+    right: 0px;
+    top: 150px;
+    padding: 16px 14px 13px 14px;
+    border-radius: 10px 0 0 10px;
+    background: rgba(53, 53, 53, .7);
+}
+
+.cart__tag--isopen {
+    transition: 2s;
+    right: 350px;
+    top: 150px;
+}
+
+.cart {
+    position: absolute;
+    background: rgba(53, 53, 53, .7);
+    height: 100vh;
+    top: -150px;
+    right: -350px;
+    width: 350px;
+    padding-left: 20px;
+    overflow-y: scroll;
+    z-index: 2;
+}
+
+.cart__title {
+    font-size: 24px;
+    color: #ffffff;
+    margin: 77px 0 35px 0;
+}
+
+.cart__items {
+    padding: 0;
+    border-bottom: 2px dashed #c2c2c2;
+    margin-right: 15px;
+    padding-bottom: 15px;
+
+}
+
+.cart_item {
+    display: flex;
+    position: relative;
+    width: 315px;
+    align-items: center;
+    list-style: none;
+    color: #ffffff;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    // background: rgba(255, 255, 255, 0.1);
+    background: #82f4d3;
+}
+
+.cart__descwrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.quantity {
+    width: 100px;
+}
+
+.cart__item__qtu__minus {
+    position: absolute;
+    top: 27px;
+    right: 55px;
+}
+
+.cart__item__qtu__plus {
+    position: absolute;
+    top: 27px;
+    right: 4px;
+}
+
+.cart__item__qty {
+    width: 50px;
+}
+
+.cart__close__item {
+    position: absolute;
+    top: -11px;
+    right: -11px;
+}
+
+.cart__item__img {
+    border-radius: 10px 0 0 10px;
+    margin-right: 20px;
+}
+
+.cart__item__description {
+    display: flex;
+    flex-direction: column;
+    width: 155px;
+}
+
+.cart__item__name {
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 200;
+    color: #787878;
+    font-style: italic;
+}
+
+.cart__item__price {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 200;
+    color: #1c534d;
+}
+
+.cart__price {
+    color: #ffffff;
+    font-style: italic;
+    font-size: 24px;
+    font-weight: 800;
+    margin: 0;
+    margin-right: 10px;
+}
+
+.cart__totalprice {
+    color: #04f6f2;
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.cart__checkout {
+    width: 200px;
+    height: 40px;
+    margin-top: 15px;
+    border-radius: 20px;
+    border: 1px solid #fff;
+    background: rgba(255, 255, 255, .1);
+    color: #ffffff;
+    font-size: 18px;
+    outline: none;
+}

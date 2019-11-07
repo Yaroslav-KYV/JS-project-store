@@ -19,6 +19,7 @@
   "homepage": "http://./",
   "scripts": {
     "start": "webpack-dev-server --config webpack.dev.js --mode development",
+    "mystart": "webpack-dev-server --config webpack.dev.js --mode development --port 8000",
     "build": "webpack --config webpack.prod.js --mode production",
     "preview": "npm run build && http-server dist",
     "test": "standard"
