@@ -1,4 +1,11 @@
-@import './section2.scss';
-
-
-
+@import './typography';
+@import './normalize';
+@import './helpers/variables';
+@import './helpers/mixins';
+@import './helpers/placeholder';
+@import './base';
+@import './section2';
+@import './section4';
+@import './popularArrivals';
+@import './footer.scss';
+@import './header.scss';
