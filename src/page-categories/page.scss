@@ -20,7 +20,16 @@ video {
 list-style: none;
 display: flex;
 justify-content: center;
-padding-bottom: 40px ;
+padding-bottom: 40px;
+
+}
+
+.autoplay__img {
+	height: 50px;
+	margin-right: 20px;
+	margin: 0 auto;
+	padding: 0 20px;
+	// width: 200px;
 }
 
 .video-title {
