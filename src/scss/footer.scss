@@ -86,6 +86,23 @@ h6 {
   color: #82F4D2;
 }
 
+.footer-visa {
+  position: absolute;
+  left: 20px;
+  top: 105px;
+  width: 90px;
+  // height: 36px;
+}
+
+.footer-mastercard {
+  position: absolute;
+  left: 150px;
+  top: 110px;
+  width: 90px;
+  // height: 20px;
+}
+
+
 .footer-nav__logo img {
   display: inline-block;
   width: 36px;
@@ -195,3 +212,5 @@ h6 {
 .footer-icons__svg:hover {
   fill: $green-color;
 }
+
+
