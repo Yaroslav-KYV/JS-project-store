@@ -1,17 +1,57 @@
-import $ from "jquery";
-import 'slick-carousel';
-import 'slick-carousel/slick/slick.scss'
 import '../scss/main.scss';
 import './page.scss';
+import '../js/brandSlider.js';
+import store from './shoes.js';
+import catTempl from './template.hbs';
 
-document.addEventListener('DOMContentLoaded', () => {
-  console.log('DOMContentLoaded', 'page-contacts');
-});
+let men = [];
+let women = [];
+let kids = [];
 
-// Слайдер брендов
-$('.autoplay').slick({
-  slidesToShow: 8,
-  slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 2000,
-});
+const filtered = {
+  men: {
+    title: 'Men',
+    items: [],
+  },
+  women: {
+    title: 'Women',
+    items: [],
+  },
+  kids: {
+    title: 'Kids',
+    items: [],
+  }
+}
+
+store.forEach(el => {
+  if(el.category === 'men') {
+    filtered.men.items.push(el);
+  } else if(el.category === 'women') {
+    filtered.women.items.push(el);
+  } else {
+    filtered.kids.items.push(el);
+  }
+})
+
+console.log(filtered);
+
+let markup = '';
+
+function renderAll(filteredData) {
+  Object.keys(filteredData).forEach(key => {
+    if(filteredData[key].items.length > 0) {
+      markup += catTempl(filteredData[key]);
+    }
+  })
+  console.log(markup);
+}
+
+renderAll(filtered);
+
+document.querySelector('.categories-array').innerHTML = markup;
+
+// const arrElms
+// eventListener to ul
+// if e.target.nodeName === "BUTTON" 
+// arrElms.forEach(el => el.classList.remove('active'))
+// e.target.className.add
