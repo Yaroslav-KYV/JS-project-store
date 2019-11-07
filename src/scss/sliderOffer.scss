@@ -1,9 +1,3 @@
-.wrapper {
-  max-width: 1170px;
-  margin: 0 auto;
-  // background-color: palegreen;
-}
-
 .slider_offer__list{
   margin: 0;
   padding: 0;
@@ -33,6 +27,7 @@
 }
 
 .slider_offer__ctrl-prew {
+  height: 17px;
   left: 0;
   border-bottom: 1px solid #c6c6c6;
   transform: translateX(-100%);
