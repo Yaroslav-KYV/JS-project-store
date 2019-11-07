@@ -25,13 +25,13 @@ body {
 }
 
 .shopItems {
+  width: 1170px;
   display: flex;
   justify-content: space-between;
 }
 
 .item {
   position: relative;
-  margin-right: 55px;
   font-weight: 400;
   font-size: 15px;
   height: 443px;
@@ -85,12 +85,18 @@ body {
 .item_cart:hover {
   opacity: 1;
 }
+.item_imgContainer {
+  width: 250px;
+  height: 305px;
+  background-color: #f3f2f2;
+  padding-top: 25px;
 
-.item_img {
-  margin-bottom: 65px;
 }
 
 
 
 
 
+.item_img {
+  margin-bottom: 65px;
+}
