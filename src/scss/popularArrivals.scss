@@ -25,13 +25,13 @@ body {
 }
 
 .shopItems {
+  width: 1170px;
   display: flex;
   justify-content: space-between;
 }
 
 .item {
   position: relative;
-  margin-right: 55px;
   font-weight: 400;
   font-size: 15px;
   height: 443px;
@@ -92,6 +92,10 @@ body {
   padding-top: 25px;
 
 }
+
+
+
+
 
 .item_img {
   margin-bottom: 65px;
