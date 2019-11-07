@@ -3,11 +3,13 @@ const cartTag = document.querySelector('.cart__tag');
 const cartTagImage = document.querySelector('.cart__tagimage');
 
 
+if(cart) {
 
-const cartOpenClose = (event) => {
+  const cartOpenClose = (event) => {
 
-    if (event.target === cartTag || event.target === cartTagImage) {
-        cartTag.classList.toggle('cart__tag--isopen');
-    }
+      if (event.target === cartTag || event.target === cartTagImage) {
+          cartTag.classList.toggle('cart__tag--isopen');
+      }
+  }
+  cartTag.addEventListener('click', cartOpenClose);
 }
-cartTag.addEventListener('click', cartOpenClose);
