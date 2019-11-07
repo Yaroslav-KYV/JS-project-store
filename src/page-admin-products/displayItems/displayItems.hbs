@@ -1,5 +1,5 @@
 
-
+{{#each}}
 <li class="product-item">
  <div class="item_imgContainer" data-itemId="{{id}}">
           <img src="{{img}}" class="item_img" width="250" height="443">
@@ -9,8 +9,9 @@
         <p class="item_price">{{price}}</p>
       </div>
 
-        <div class="item_cart">
-           <button data-action="submit">Готово</button>
-  <button data-action="cancel">Відмініти</button>
+        <div class="but-section">
+            <button  id="{{_id}}" data-action="delete"><i class="material-icons">Удалить</i></button>
+  <button  id="{{_id}}" data-action="edit"><i class="material-icons">Редактировать</i></button>
         </div>
 </li>
+{{/each}}
