@@ -1,7 +1,13 @@
+.container_offer {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
 .slider_offer__list{
   margin: 0;
   padding: 0;
   list-style: none;
+  position: relative;
 }
 
 .slider_offer__section{
@@ -13,7 +19,6 @@
   display: flex;
   justify-content: center;
   text-align: center;
-  position: relative;
 }
 
 .slider_offer__ctrl{
@@ -31,6 +36,8 @@
   left: 0;
   border-bottom: 1px solid #c6c6c6;
   transform: translateX(-100%);
+  outline: none;
+  cursor: pointer;
 }
 
 .slider_offer__ctrl-prew::before{
@@ -46,9 +53,13 @@
 }
 
 .slider_offer__ctrl-next{
+  height: 17px;
   right: 0;
   border-top: 1px solid #c6c6c6;
   transform: translateX(100%);
+  outline: none;
+  cursor: pointer;
+
 }
 
 .slider_offer__ctrl-next::after{
@@ -64,6 +75,8 @@
 }
 
 .slider_offer__title{
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
   margin: 0;
   padding: 0;
   font-size: 45px;
@@ -72,20 +85,29 @@
 }
 
 .slider_offer__text{
-  margin: 0;
+  font-family: 'Poppins';
+  font-weight: 400;
+  margin: 0 auto;
   padding: 0;
   margin-bottom: 30px;
   max-width: 860px;
+  color: #666666;
+
 }
 
 .slider_offer__name {
+  font-family: 'Poppins';
+  font-weight: 700;
   margin: 0;
   padding: 0;
   margin-bottom: 10px;
+  color: #666666;
 }
 
 .slider_offer__occupation{
+  font-family: 'Poppins';
   margin: 0;
   padding: 0;
   color: #82f4d3;
 }
+
