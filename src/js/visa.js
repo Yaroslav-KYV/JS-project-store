@@ -1,10 +1,6 @@
 const visa = document.querySelector('.footer-visa');
 const mastercard = document.querySelector('.footer-mastercard');
 const modalWrapper = document.querySelector('.footer-modal__wrapper');
-// const modalTitle = modalWrapper.querySelector('.footer-modal__title');
-// const modalClose = document.querySelector('.footer-modal__close');
-// const visaTitle = document.querySelector('.modal-title__visa');
-// const mastercardTitle = document.querySelector('.modal-title__mastercard');
 const footerModalH2 = document.querySelector('.footer-modal__h2');
 const footerModalP = document.querySelector('.footer-modal__p');
 
