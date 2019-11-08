@@ -43,7 +43,7 @@ const store = [
   },
   {
     brandName: "Nike",
-    src: '../img/popularArrivals/cross1.jpg',
+    src: '../img/popularArrivals/cross2.jpg',
     description: "",
     descriptionFull: "",
     category: "women",
@@ -57,7 +57,7 @@ const store = [
   },
   {
     brandName: "Nike",
-    src: '../img/popularArrivals/cross1.jpg',
+    src: '../img/popularArrivals/cross2.jpg',
     description: "",
     descriptionFull: "",
     category: "men",
@@ -71,7 +71,7 @@ const store = [
   },
   {
     brandName: "Nike",
-    src: '../img/popularArrivals/cross1.jpg',
+    src: '../img/popularArrivals/cross2.jpg',
     description: "",
     descriptionFull: "",
     category: "kids",
@@ -85,7 +85,7 @@ const store = [
   },
   {
     brandName: "Nike",
-    src: '../img/popularArrivals/cross1.jpg',
+    src: '../img/popularArrivals/cross3.jpg',
     description: "",
     descriptionFull: "",
     category: "women",
@@ -99,7 +99,7 @@ const store = [
   },
   {
     brandName: "Nike",
-    src: '../img/popularArrivals/cross1.jpg',
+    src: '../img/popularArrivals/cross3.jpg',
     description: "",
     descriptionFull: "",
     category: "men",
@@ -113,7 +113,7 @@ const store = [
   },
   {
     brandName: "Nike",
-    src: '../img/popularArrivals/cross1.jpg',
+    src: '../img/popularArrivals/cross3.jpg',
     description: "",
     descriptionFull: "",
     category: "kids",
@@ -127,7 +127,7 @@ const store = [
   },
   {
     brandName: "Nike",
-    src: '../img/popularArrivals/cross1.jpg',
+    src: '../img/popularArrivals/cross4.jpg',
     description: "",
     descriptionFull: "",
     category: "women",
@@ -141,7 +141,7 @@ const store = [
   },
   {
     brandName: "Nike",
-    src: '../img/popularArrivals/cross1.jpg',
+    src: '../img/popularArrivals/cross4.jpg',
     description: "",
     descriptionFull: "",
     category: "men",
@@ -155,7 +155,7 @@ const store = [
   },
   {
     brandName: "Nike",
-    src: '../img/popularArrivals/cross1.jpg',
+    src: '../img/popularArrivals/cross4.jpg',
     description: "",
     descriptionFull: "",
     category: "kids",
