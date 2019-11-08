@@ -1,3 +1,14 @@
+import { getShopData } from './utils/api';
+import store from './store';
+import './addToCart';
+
+
+getShopData().then(resData => {
+  console.log('resData', resData);
+  store.shopData = resData;
+  console.log(store)
+});
+
 let toggled = false;
 const nav = document.getElementsByClassName('nav')[0];
 const btn = document.getElementsByClassName('nav-tgl')[0];
@@ -14,3 +25,5 @@ btn.onclick = function(evt) {
     document.body.style.overflow = "auto"
   }
 }
+
+
