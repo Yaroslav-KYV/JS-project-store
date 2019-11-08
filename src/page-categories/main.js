@@ -10,20 +10,13 @@ import { renderAll } from '../js/utils/helpers';
 
 const categoriesArray = document.querySelector('.categories-array');
 
-
-<<<<<<< HEAD
-
-
 let markup = renderAll();
-
 document.querySelector('.categories-array').innerHTML = markup;
-=======
 getShopData().then(resData => {
   store.shopData = resData;
   console.log('store', store)
   categoriesArray.innerHTML = renderAll(resData);
 })
->>>>>>> dev
 
 const arrElms = document.querySelectorAll('.categories-menu__button');
 const catMenu = document.querySelector('.categories-menu');
