@@ -76,6 +76,17 @@ module.exports = {
         ]
       },
       {
+        test: /\.(mov|mp4)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[path][name].[ext]'
+            }
+          }
+        ]
+      },
+      {
         test: /\.(gif|png|jpe?g|webp|svg)$/i,
         use: [
           {
@@ -98,9 +109,7 @@ module.exports = {
   // https://webpack.js.org/concepts/plugins/
   plugins: [
     new CleanWebpackPlugin(), // cleans output.path by default
-    new CopyWebpackPlugin([
-        {from:'src/img',to:'img'},
-    ]),
+    new CopyWebpackPlugin([{ from: "src/img", to: "img" }, { from: "src/videos", to: "videos" }]),
     new HtmlWebpackPlugin({
       template: './src/page-index/tmpl.html',
       chunks: ['index'],
