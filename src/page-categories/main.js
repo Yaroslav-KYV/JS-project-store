@@ -10,35 +10,11 @@ let men = [];
 let women = [];
 let kids = [];
 
-const filtered = {
-  men: {
-    title: 'Men',
-    items: [],
-  },
-  women: {
-    title: 'Women',
-    items: [],
-  },
-  kids: {
-    title: 'Kids',
-    items: [],
-  }
-}
-
-store.forEach(el => {
-  if(el.category === 'men') {
-    filtered.men.items.push(el);
-  } else if(el.category === 'women') {
-    filtered.women.items.push(el);
-  } else {
-    filtered.kids.items.push(el);
-  }
-})
-
-console.log(filtered);
 
 
-let markup = renderAll(filtered);
+
+
+let markup = renderAll();
 
 document.querySelector('.categories-array').innerHTML = markup;
 
