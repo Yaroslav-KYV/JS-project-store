@@ -2,6 +2,9 @@ import displayItems from './displayItems.hbs';
 import displayItemsStyle from './displayItems.css';
 import displayProductSection from './displayProductSection.css'
 
+// refs : {
+// newAdBut: document.querySelector(".addItem")
+// }
 
 // services.getAll().then(data => {
 
