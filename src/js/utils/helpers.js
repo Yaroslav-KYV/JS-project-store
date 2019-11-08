@@ -1,6 +1,5 @@
 import catTempl from './template.hbs';
 
-
 export function renderAll(filteredData) {
   let markup = '';
   Object.keys(filteredData).forEach(key => {

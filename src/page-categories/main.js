@@ -35,7 +35,7 @@ store.forEach(el => {
   }
 })
 
-console.log(filtered);
+console.log('filtered', filtered)
 
 
 let markup = renderAll(filtered);
@@ -45,7 +45,7 @@ document.querySelector('.categories-array').innerHTML = markup;
 const arrElms = document.querySelectorAll('.categories-menu__button');
 const catMenu = document.querySelector('.categories-menu');
 
-catMenu.add.eventListener('click', ()=> {
+catMenu.addEventListener('click', (e)=> {
   if(e.target.nodeName === "BUTTON") {
     arrElms.forEach(el => el.classList.remove('active'))
     e.target.className.add
