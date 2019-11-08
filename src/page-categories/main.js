@@ -1,14 +1,10 @@
 import '../scss/main.scss';
 import './page.scss';
-<<<<<<< HEAD
 import '../js/brandSlider.js'
 import '../js/index';
 import '../js/cart.js';
-=======
-import '../js/brandSlider.js';
 import store from './shoes.js';
-import catTempl from './template.hbs';
->>>>>>> 3ee9f244972b48926f5d0da2638fcad3c0d78127
+import { renderAll } from '../js/utils/helpers';
 
 let men = [];
 let women = [];
@@ -41,18 +37,8 @@ store.forEach(el => {
 
 console.log(filtered);
 
-let markup = '';
 
-function renderAll(filteredData) {
-  Object.keys(filteredData).forEach(key => {
-    if(filteredData[key].items.length > 0) {
-      markup += catTempl(filteredData[key]);
-    }
-  })
-  console.log(markup);
-}
-
-renderAll(filtered);
+let markup = renderAll(filtered);
 
 document.querySelector('.categories-array').innerHTML = markup;
 
