@@ -240,6 +240,9 @@ transform: translateX(-0.1em) translateY(-0.1em);
 .brands:hover::before {
 transform: translateX(-0.5em) translateY(0.5em);
 }
+.brands a {
+  color: #ffffff;
+}
 /* Shoes */
 .nike-pos {
 display: flex;
