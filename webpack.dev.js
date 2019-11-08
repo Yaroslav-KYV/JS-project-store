@@ -14,8 +14,7 @@ module.exports = {
     index: './src/page-index/main.js',
     about: './src/page-about/main.js',
     categories: './src/page-categories/main.js',
-    adminProducts: './src/page-admin-products/main.js',
-    adminHome: './src/page-admin-home/main.js',
+    adminProducts: './src/page-admin-products/main.js'
   },
 
   // https://webpack.js.org/configuration/dev-server/
@@ -45,7 +44,7 @@ module.exports = {
         ]
       },
       {
-        test: /\.(gif|png|jpe?g|svg|jpg)$/i,
+        test: /\.(gif|png|jpe?g|webp|svg|jpg)$/i,
         use: [
           {
             loader: 'url-loader',
@@ -114,11 +113,6 @@ module.exports = {
       template: './src/page-admin-products/tmpl.html',
       chunks: ['adminProducts'],
       filename: 'admin-products.html'
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/page-admin-home/tmpl.html',
-      chunks: ['adminHome'],
-      filename: 'admin-home.html'
     }),
     new WebpackBar()
   ]
