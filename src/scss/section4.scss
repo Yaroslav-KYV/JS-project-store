@@ -19,6 +19,7 @@
 .text {
     font-family: 'Poppins', sans-serif;
     font-size: 15px;
+    font-weight: light;
     line-height: 30px;
     color: #888888;
 }
@@ -30,7 +31,7 @@
     padding-bottom: 36px;
 }
 
-.button {
+.button-section4 {
     font-family: 'Poppins', sans-serif;
     width: 145px;
     height: 47px;
@@ -47,11 +48,10 @@
     position: relative;
     bottom: 58px; left: -12px;
   }
-
-  .button-container {
+  
+  .button-container4 {
     position: absolute;
-    top: 440px;
-    left: 10px;
+    top: 450px;
   }
 
   .container-img {

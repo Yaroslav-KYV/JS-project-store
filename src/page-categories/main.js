@@ -1,63 +1,43 @@
 import '../scss/main.scss';
 import './page.scss';
 import '../js/brandSlider.js'
+import '../js/visa.js'
 import '../js/index';
 import '../js/cart.js';
-
-
-import store from '../js/shoes';
+import { getShopData } from '../js/utils/api';
+import store from '../js/store';
 import { renderAll } from '../js/utils/helpers';
 
+const categoriesArray = document.querySelector('.categories-array');
 
-// Store creating
 
-let men = [];
-let women = [];
-let kids = [];
-
-const filtered = {
-  men: {
-    title: 'Men',
-    items: [],
-  },
-  women: {
-    title: 'Women',
-    items: [],
-  },
-  kids: {
-    title: 'Kids',
-    items: [],
-  }
-}
-
-store.forEach(el => {
-  if(el.category === 'men') {
-    filtered.men.items.push(el);
-  } else if(el.category === 'women') {
-    filtered.women.items.push(el);
-  } else {
-    filtered.kids.items.push(el);
-  }
+getShopData().then(resData => {
+  store.shopData = resData;
+  console.log('store', store)
+  categoriesArray.innerHTML = renderAll(resData);
 })
-
-console.log(filtered);
-
-document.querySelector('.categories-array').innerHTML = renderAll(filtered);
 
 const arrElms = document.querySelectorAll('.categories-menu__button');
 const catMenu = document.querySelector('.categories-menu');
 
-catMenu.add.eventListener('click', ()=> {
+// document.querySelector('.allBut').classList.remove('active')
+
+catMenu.addEventListener('click', (e)=> {
   if(e.target.nodeName === "BUTTON") {
     arrElms.forEach(el => el.classList.remove('active'))
-    e.target.className.add
+    e.target.classList.add('active')
   }
 
-  store.filtered(el => el.category)
+  console.log(e.target.textContent);
+  let filteredStore;
+  if (e.target.textContent.toLowerCase() !== 'all') {
+    filteredStore = store.shopData.filter(product => product.category === e.target.textContent.toLowerCase());
+  } else {
+    filteredStore = store.shopData;
+  }
+  console.log('filteredStore', filteredStore)
+  categoriesArray.innerHTML = renderAll(filteredStore);
 })
-
-
-
 
 //    div#idapp
 // copy js
