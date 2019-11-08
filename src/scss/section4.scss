@@ -1,11 +1,12 @@
 
 .section-four {
     width: 100%;
-    height: 732px;
+    min-height: 732px;
+    padding-bottom: 115px;
 }
 
 .container {
-    width: 1170px;
+  width: 1170px;
   margin: 0 auto;
   display: flex;
   position: relative;
@@ -38,7 +39,7 @@
     font-size: 15px;
     position: relative;
   }
-  
+
   .button-border {
     width: 145px;
     height: 47px;
@@ -46,14 +47,14 @@
     position: relative;
     bottom: 58px; left: -12px;
   }
-  
+
   .button-container {
     position: absolute;
-    top: 400px;
+    top: 440px;
+    left: 10px;
   }
 
   .container-img {
       position: absolute;
-     left: 700px; 
-      
+     left: 700px;
   }
