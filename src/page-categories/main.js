@@ -1,6 +1,6 @@
-// import '../scss/main.scss';
-// import './page.scss';
-// import '../js/brandSlider.js';
+import '../scss/main.scss';
+import './page.scss';
+import '../js/brandSlider.js';
 import store from './shoes.js';
 import catTempl from './template.hbs';
 
