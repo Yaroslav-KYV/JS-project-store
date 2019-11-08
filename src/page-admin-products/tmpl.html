@@ -16,12 +16,13 @@
 <body>
   <%= require('html-loader!../partials/navigation.html') %>
   <section class="adminLogin">
+    <!-- <button class="close">X</button> -->
       <div class="adminContainer">
     <form class="login">
       <h2>Admin login</h2>
-      <input type="text" placeholder="login">
-      <input type="text" placeholder="password">
-      <button>Log in</button>
+      <input type="text" placeholder="e-mail" name="email">
+      <input type="text" placeholder="password" name="password">
+      <button class="loginButton">Log in</button>
     </form>
 
   </div>
@@ -37,9 +38,10 @@
       <textarea  placeholder="Full Description" name="fullDescription"></textarea>
       <input type="text" placeholder="Price" name="price">
 
-      <select name="Category">
+      <select name="Category" class="select">
           <option value="Woman">Woman</option>
           <option value="Man">Man</option>
+          <option value="Woman">Kids</option>
           </select>
       <br><button class="addItemButton">Add item</button>
     </form>
