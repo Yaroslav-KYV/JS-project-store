@@ -14,7 +14,6 @@ let kids = [];
 
 
 
-
 let markup = renderAll();
 
 document.querySelector('.categories-array').innerHTML = markup;
