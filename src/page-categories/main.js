@@ -3,8 +3,13 @@ import './page.scss';
 import '../js/brandSlider.js'
 import '../js/index';
 import '../js/cart.js';
-import store from './shoes.js';
+
+
+import store from '../js/shoes';
 import { renderAll } from '../js/utils/helpers';
+
+
+// Store creating
 
 let men = [];
 let women = [];
@@ -37,10 +42,7 @@ store.forEach(el => {
 
 console.log(filtered);
 
-
-let markup = renderAll(filtered);
-
-document.querySelector('.categories-array').innerHTML = markup;
+document.querySelector('.categories-array').innerHTML = renderAll(filtered);
 
 const arrElms = document.querySelectorAll('.categories-menu__button');
 const catMenu = document.querySelector('.categories-menu');

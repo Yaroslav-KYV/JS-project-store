@@ -1,4 +1,4 @@
-const store = [
+  const store = [
   {
     brandName: "Nike",
     src: '../img/store/w1.webp',

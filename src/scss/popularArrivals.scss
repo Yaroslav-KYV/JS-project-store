@@ -2,10 +2,7 @@ body {
   margin: 0;
 }
 
-.popularArrivals {
-  width: 100%;
-  // display: flex;
-}
+
 
 .popularArrivals h2 {
   font-family: "Cormorant Garamond", serif;
@@ -26,9 +23,9 @@ body {
 }
 
 .shopItems {
-  width: 1170px;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .item {
