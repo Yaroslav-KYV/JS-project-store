@@ -61,3 +61,10 @@ catMenu.add.eventListener('click', ()=> {
 
   store.filtered(el => el.category)
 })
+
+
+
+
+//    div#idapp
+// copy js
+// copy scss
