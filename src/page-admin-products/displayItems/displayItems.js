@@ -18,12 +18,12 @@ import displayProductSection from './displayProductSection.css'
 
 
 
-async getAll() {
+// async getAll() {
 
-  try {
-    const result = await this.axios.get(`${this.url}/ads/all`);
-    return result.data.ads;
-  } catch (error) {
-    throw new Error(error);
-  }
-},
+//   try {
+//     const result = await this.axios.get(`${this.url}/ads/all`);
+//     return result.data.ads;
+//   } catch (error) {
+//     throw new Error(error);
+//   }
+// }

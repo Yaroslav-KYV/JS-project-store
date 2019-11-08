@@ -20,8 +20,7 @@ module.exports = {
     index: './src/page-index/main.js',
     about: './src/page-about/main.js',
     categories: './src/page-categories/main.js',
-    adminProducts: './src/page-admin-products/main.js',
-    adminHome: './src/page-admin-home/main.js'
+    adminProducts: './src/page-admin-products/main.js'
   },
 
   // how to write the compiled files to disk
@@ -77,7 +76,18 @@ module.exports = {
         ]
       },
       {
-        test: /\.(gif|png|jpe?g|svg)$/i,
+        test: /\.(mov|mp4)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[path][name].[ext]'
+            }
+          }
+        ]
+      },
+      {
+        test: /\.(gif|png|jpe?g|webp|svg)$/i,
         use: [
           {
             loader: 'url-loader',
@@ -99,9 +109,7 @@ module.exports = {
   // https://webpack.js.org/concepts/plugins/
   plugins: [
     new CleanWebpackPlugin(), // cleans output.path by default
-    new CopyWebpackPlugin([
-        {from:'src/img',to:'img'},
-    ]),
+    new CopyWebpackPlugin([{ from: "src/img", to: "img" }, { from: "src/videos", to: "videos" }]),
     new HtmlWebpackPlugin({
       template: './src/page-index/tmpl.html',
       chunks: ['index'],
@@ -121,11 +129,6 @@ module.exports = {
       template: './src/page-admin-products/tmpl.html',
       chunks: ['adminProducts'],
       filename: 'admin-products.html'
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/page-admin-products/tmpl.html',
-      chunks: ['adminHome'],
-      filename: 'admin-home.html'
     }),
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css',

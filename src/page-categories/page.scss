@@ -1,3 +1,32 @@
+video {
+  width: 100%;
+}
+
+.video-box {
+  position: relative;
+  margin-bottom: 80px;
+}
+
+.video-box video{
+  position: relative;
+  z-index: 0;
+}
+
+.overlay {
+  position: absolute;
+  top: 80%;
+  left: 0;
+  z-index: 1;
+}
+
+.categories-menu {
+list-style: none;
+display: flex;
+justify-content: center;
+padding-bottom: 40px;
+
+}
+
 .autoplay__img {
 	height: 50px;
 	margin-right: 20px;
@@ -5,3 +34,58 @@
 	padding: 0 20px;
 	// width: 200px;
 }
+
+.video-title {
+  font-size: 100px;
+  padding: 0 40px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: regular;
+  font-weight: bold;
+  }
+
+  .categories-menu__button {
+    height: 80px;
+    font-size: 24px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: #323237;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: transform 0.3s;
+    margin-left: 40px;
+    padding: 0 40px;
+    display: block;
+    border: none;
+
+    &.active {
+      transition: ease-in-out .4s;
+      background-color: #82F4D2;
+    }
+  }
+
+  .categories-menu__button:hover{
+    transition: ease-in-out .4s;
+    background-color: #82F4D2;
+    }
+
+.autoplay {
+  margin: 0 auto;
+	margin-top: 20px;
+  }
+
+  .autoplay__img {
+  height: 50px;
+  margin: 0 auto;
+  }
+
+  .categories-promo {
+    margin-bottom: 100px;
+  }
+
+  .store-title {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 45px;
+    font-weight: 300;
+    margin-top: 45px;
+    margin-bottom: 60px;
+  }

@@ -55,23 +55,14 @@ line-height: 30px;
   // padding: 25px 17px;
   background-color: #82f4d3;
   font-size: 15px;
-  position: relative;
-}
-
-// .button__border {
-//   width: 145px;
-//   height: 47px;
-//   border: 1px solid #82f4d3;
-//   position: relative;
-//   bottom: 58px; left: -12px;
-// }
-
-.button-container {
+  // position: relative;
   position: absolute;
-  bottom: 100px;
-  right: -100px;
+  bottom: -400px;
+  right: -400px;
 
 }
+
+
 
 .button::before {
   content: "";
