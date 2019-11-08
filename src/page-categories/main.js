@@ -1,52 +1,20 @@
 import '../scss/main.scss';
 import './page.scss';
-import '../js/brandSlider.js';
+import '../js/brandSlider.js'
+import '../js/index';
+import '../js/cart.js';
 import store from './shoes.js';
-import catTempl from './template.hbs';
+import { renderAll } from '../js/utils/helpers';
 
 let men = [];
 let women = [];
 let kids = [];
 
-const filtered = {
-  men: {
-    title: 'Men',
-    items: [],
-  },
-  women: {
-    title: 'Women',
-    items: [],
-  },
-  kids: {
-    title: 'Kids',
-    items: [],
-  }
-}
 
-store.forEach(el => {
-  if(el.category === 'men') {
-    filtered.men.items.push(el);
-  } else if(el.category === 'women') {
-    filtered.women.items.push(el);
-  } else {
-    filtered.kids.items.push(el);
-  }
-})
 
-console.log(filtered);
 
-let markup = '';
 
-function renderAll(filteredData) {
-  Object.keys(filteredData).forEach(key => {
-    if(filteredData[key].items.length > 0) {
-      markup += catTempl(filteredData[key]);
-    }
-  })
-  console.log(markup);
-}
-
-renderAll(filtered);
+let markup = renderAll();
 
 document.querySelector('.categories-array').innerHTML = markup;
 
