@@ -4,16 +4,14 @@ import '../js/brandSlider.js'
 import '../js/visa.js'
 import '../js/index';
 import '../js/cart.js';
+import '../js/signupModal';
 import store from './shoes.js';
 import { renderAll } from '../js/utils/helpers';
+
 
 let men = [];
 let women = [];
 let kids = [];
-
-
-
-
 
 let markup = renderAll();
 
