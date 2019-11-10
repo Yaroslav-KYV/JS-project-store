@@ -6,6 +6,7 @@ import '../js/cart.js';
 import store from './shoes.js';
 import { renderAll } from '../js/utils/helpers';
 
+
 let men = [];
 let women = [];
 let kids = [];

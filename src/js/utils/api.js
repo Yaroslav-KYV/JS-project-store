@@ -11,7 +11,7 @@ export const getShopData = () => {
       price: 0,
       size: 36,
       type: "Кросoвки",
-      _id: "5dc3ccbd92a65308ab3ab8f8",
+      _id: "5dc3ccbd92a65308ab767",
     },
     {
       brandName: "Nike",
@@ -24,7 +24,7 @@ export const getShopData = () => {
       price: 0,
       size: 36,
       type: "Кросoвки",
-      _id: "5dc3asd5308ab3ab8f8",
+      _id: "5dc3asd5308ab3646",
     },
     {
       brandName: "Nike",
@@ -37,7 +37,7 @@ export const getShopData = () => {
       price: 0,
       size: 36,
       type: "Кросoвки",
-      _id: "5dc3ccbd92a65308ab3ab8f8",
+      _id: "5dc3ccbd92a65308ab3ab8545",
     },
     {
       brandName: "Nike",
@@ -50,7 +50,7 @@ export const getShopData = () => {
       price: 0,
       size: 36,
       type: "Кросoвки",
-      _id: "5dc3ccbd92a65308ab3ab8f8",
+      _id: "5dc3ccbd92a6530425",
     },
     {
       brandName: "Nike",
@@ -63,7 +63,7 @@ export const getShopData = () => {
       price: 0,
       size: 36,
       type: "Кросoвки",
-      _id: "5dc3asd5308ab3ab8f8",
+      _id: "5dc3asd5308ab53",
     },
     {
       brandName: "Nike",
@@ -76,7 +76,7 @@ export const getShopData = () => {
       price: 0,
       size: 36,
       type: "Кросoвки",
-      _id: "5dc3ccbd92a65308ab3ab8f8",
+      _id: "5dc3ccbd92a65308ab3a54",
     },
     {
       brandName: "Nike",
@@ -89,7 +89,7 @@ export const getShopData = () => {
       price: 0,
       size: 36,
       type: "Кросoвки",
-      _id: "5dc3ccbd92a65308ab3ab8f8",
+      _id: "5dc3ccbd92a65308ab3a66",
     },
     {
       brandName: "Nike",
@@ -102,7 +102,7 @@ export const getShopData = () => {
       price: 0,
       size: 36,
       type: "Кросoвки",
-      _id: "5dc3asd5308ab3ab8f8",
+      _id: "5dc3asd5308ab3ab855",
     },
     {
       brandName: "Nike",
@@ -115,7 +115,7 @@ export const getShopData = () => {
       price: 0,
       size: 36,
       type: "Кросoвки",
-      _id: "5dc3ccbd92a65308ab3ab8f8",
+      _id: "5dc3ccbd92a65308ab3ab8f1",
     },
     {
       brandName: "Nike",
@@ -128,7 +128,7 @@ export const getShopData = () => {
       price: 0,
       size: 36,
       type: "Кросoвки",
-      _id: "5dc3ccbd92a65308ab3ab8f8",
+      _id: "5dc3ccbd92a65308ab3ab8f2",
     },
     {
       brandName: "Nike",
@@ -141,7 +141,7 @@ export const getShopData = () => {
       price: 0,
       size: 36,
       type: "Кросoвки",
-      _id: "5dc3asd5308ab3ab8f8",
+      _id: "5dc3asd5308ab3aby6",
     },
     {
       brandName: "Nike",
@@ -154,10 +154,22 @@ export const getShopData = () => {
       price: 0,
       size: 36,
       type: "Кросoвки",
-      _id: "5dc3ccbd92a65308ab3ab8f8",
+      _id: "5dc3ccbd92a65308ab3aj67",
     },
   ]
 
   return Promise.resolve(shopData)
 
+}
+
+
+export const deleteItem = (id, token) => {
+//   fetch(`http://localhost:3000/api/products/${id}`, {
+//     method: 'DELETE',
+//     headers: {
+//         'content-type': 'application/json',
+//         'Authorization': `Bearer ${token}`,
+//     },
+// }).then(res => res.json())
+  return Promise.resolve({message: `success! id: ${id} is deleted`});
 }
