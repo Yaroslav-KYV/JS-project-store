@@ -12,4 +12,3 @@ $('.autoplay').slick({
   arrows: false,
 });
 
-

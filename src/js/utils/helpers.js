@@ -18,6 +18,9 @@ const filtered = {
 
 
 export function renderAll(shopData, isAdmin = false) {
+  filtered.men.items = [];
+  filtered.women.items = [];
+  filtered.kids.items = [];
 
   shopData.forEach(el => {
     if(el.category === 'men') {

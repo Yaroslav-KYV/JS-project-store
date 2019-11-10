@@ -40,4 +40,18 @@
 }
 .item  {
   position: relative;
+  // margin-right: 30px;
+}
+
+.shopItems {
+  justify-content: space-around;
+
+}
+// .item_name{
+//   text-align: right;
+// }
+
+.item-text{
+  display: flex;
+  justify-content: space-between;
 }
