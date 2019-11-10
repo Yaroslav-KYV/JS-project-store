@@ -14,8 +14,12 @@
   .DELETE {font-size: 16px;}
   .DELETE:hover {
     background-color: red;
-
+    cursor: pointer;
+    transition: transform 0.1s linear;
+    transform: rotate(90deg);
   }
+
+
   .EDIT{
     display: flex;
     justify-content: center;
@@ -30,8 +34,16 @@
 
   }
   .EDIT:hover{
-    background-color:  #82f4d2
+    background-color:  #82f4d2;
+    cursor: pointer;
+    transition: transform 0.1s linear;
+    transform: rotate(90deg);
   }
+
+
+
+
+
 
 .item-buts {
   position: absolute;

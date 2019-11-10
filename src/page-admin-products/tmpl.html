@@ -18,8 +18,21 @@
 
 
 ​<section class="my-goods">
- 
+
 </section>
+
+
+<div class="modal modal-hidden js-modal-backdrop">
+  <div class="modal-content">
+    <div class="close-btn" data-action="close-modal"></div>
+    <h2 class="modal-title">Newsletter</h2>
+    <p class="modal-text">Subscribe to the Bachas mailing list to receive updates on new arrivals, special offers and other discount information.</p>
+    <form class="sub-form" action="#">
+      <input class="sub-form-input" type="text" placeholder="Your Email Here">
+      <button class="sub-form-btn">subscribe</button>
+    </form>
+  </div>
+</div>
 
 
   <%= require('html-loader!../partials/footer.html') %>

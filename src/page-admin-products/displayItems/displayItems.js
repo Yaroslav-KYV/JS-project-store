@@ -2,8 +2,9 @@
 import { renderAll } from '../../js/utils/helpers';
 import { getShopData, deleteItem } from '../../js/utils/api';
 import store from '../../js/store';
-import template from '../../js/utils/templateAdm.hbs'
-// import {createListItem} from './editIte'
+
+import   './modalWindow.scss';
+
 
 // import { clearScreenDown } from 'readline';
 
@@ -46,7 +47,7 @@ const deleteListItem = element => {
 
    deleteItem(idP).then(resData => console.log('resData :', resData));
    parentListItem.remove();
-  //  console.log('.item');
+
 
 }
 
@@ -68,10 +69,48 @@ const handleListClick = ({ target }) => {
     case actions.EDIT:
     // editFn(clo);
     console.log('edittt');
-    createListItem()
+    openModalFn(clo);
       break;
   }
 };
+
+
+
+
+  // const openModal = document.querySelector('.btn-modal');
+  const open = document.querySelector('.js-modal-backdrop');
+  const secondBut = document.querySelector(".close-btn");
+  const liteboxOver = document.querySelector('.modal')
+
+
+
+  function openModalFn (e)  {
+
+      // e.preventDefault();
+      open.classList.remove('modal-hidden')
+      console.log(open);
+
+
+  }
+
+  const closeModal = ( e) => {
+
+      open.classList.add('modal-hidden');
+
+  }
+
+
+  function handleOverlay (event) {
+      if (event.target === event.currentTarget) {
+        console.log("target----", event.target);
+        console.log("currentTarget----", event.currentTarget);
+        closeModal();
+        }}
+
+  // openModal.addEventListener('click' , openModalFn);
+  secondBut.addEventListener('click' , closeModal);
+  liteboxOver.addEventListener('click', handleOverlay);
+
 
 
 
@@ -90,6 +129,11 @@ getShopData().then(resData => {
 
 
 
+// export function addListenerEditDel() {
+//   const editId = document.querySelector('.my-goods');
+
+//   editId.addEventListener('click', handleListClick);
+// }
 
 
 
