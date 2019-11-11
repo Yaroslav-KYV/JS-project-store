@@ -1,13 +1,11 @@
+import { renderAll } from "../../js/utils/helpers";
+import { getShopData, deleteItem } from "../../js/utils/api";
+import store from "../../js/store";
+import teplateForm from '../displayItems/formModal.hbs';
 
-import { renderAll } from '../../js/utils/helpers';
-import { getShopData, deleteItem } from '../../js/utils/api';
-import store from '../../js/store';
-
-import   './modalWindow.scss';
-
+import "./modalWindow.scss";
 
 // import { clearScreenDown } from 'readline';
-
 
 // class Item {
 //   //delete ad
@@ -27,38 +25,27 @@ import   './modalWindow.scss';
 
 // };
 
-
 const actions = {
-  EDIT: 'edit',
-  DELETE: 'delete'
-}
+  EDIT: "edit",
+  DELETE: "delete"
+};
 
-
-const goods = document.querySelector('.my-goods');
-
+const goods = document.querySelector(".my-goods");
 
 const deleteListItem = element => {
+  const parentListItem = element.closest(".item");
 
-  const parentListItem = element.closest('.item');
+  const idP = element.id;
 
-
-   const idP = element.id;
-
-
-   deleteItem(idP).then(resData => console.log('resData :', resData));
-   parentListItem.remove();
-
-
-}
-
+  deleteItem(idP).then(resData => console.log("resData :", resData));
+  parentListItem.remove();
+};
 
 const handleListClick = ({ target }) => {
-
-  const clo = target.closest('button');
-  if (!clo ) return;
+  const clo = target.closest("button");
+  if (!clo) return;
 
   const action = clo.dataset.action;
-
 
   switch (action) {
     case actions.DELETE:
@@ -67,60 +54,54 @@ const handleListClick = ({ target }) => {
       break;
 
     case actions.EDIT:
-    // editFn(clo);
-    console.log('edittt');
-    openModalFn(clo);
+
+      // openModalFn(clo);
+      openModalFn(teplateForm(getShopData));
       break;
   }
 };
 
+// const openModal = document.querySelector('.btn-modal');
+const open = document.querySelector(".js-modal-backdrop");
+const secondBut = document.querySelector(".close-btn");
+const liteboxOver = document.querySelector(".modal");
 
+function openModalFn(e) {
+  // e.preventDefault();
+  open.classList.remove("modal-hidden");
+  console.log(open);
+}
 
+const closeModal = e => {
+  open.classList.add("modal-hidden");
+};
 
-  // const openModal = document.querySelector('.btn-modal');
-  const open = document.querySelector('.js-modal-backdrop');
-  const secondBut = document.querySelector(".close-btn");
-  const liteboxOver = document.querySelector('.modal')
-
-
-
-  function openModalFn (e)  {
-
-      // e.preventDefault();
-      open.classList.remove('modal-hidden')
-      console.log(open);
-
-
+function handleOverlay(event) {
+  if (event.target === event.currentTarget) {
+    console.log("target----", event.target);
+    console.log("currentTarget----", event.currentTarget);
+    closeModal();
   }
+}
 
-  const closeModal = ( e) => {
+// openModal.addEventListener('click' , openModalFn);
+secondBut.addEventListener("click", closeModal);
+liteboxOver.addEventListener("click", handleOverlay);
 
-      open.classList.add('modal-hidden');
-
-  }
-
-
-  function handleOverlay (event) {
-      if (event.target === event.currentTarget) {
-        console.log("target----", event.target);
-        console.log("currentTarget----", event.currentTarget);
-        closeModal();
-        }}
-
-  // openModal.addEventListener('click' , openModalFn);
-  secondBut.addEventListener('click' , closeModal);
-  liteboxOver.addEventListener('click', handleOverlay);
-
-
-
-
-goods.addEventListener('click', handleListClick);
+goods.addEventListener("click", handleListClick);
 const isAdmin = true;
 
 getShopData().then(resData => {
   store.shopData = resData;
   goods.innerHTML = renderAll(resData, isAdmin);
-})
+});
+
+// const modalMarkup = teplateForm(здесь данные[0])
+
+const createModalForm = product => {
+  return teplateForm(product)
+}
+
 
 
 
@@ -134,8 +115,21 @@ getShopData().then(resData => {
 
 //   editId.addEventListener('click', handleListClick);
 // }
+// ========================
 
+//получить товар по айди в модальном окне
+// function getItem () {
+//   const idP = element.id;
 
-
-
+//       const result = await this.axios.get(`${this.url}/ads/${adId}`, {
+//         headers: {
+//           'Content-Type': 'application/json',
+//         },
+//       });
+//       return result.data.goal;
+//     } catch (error) {
+//       throw new Error(error);
+//     }
+//   }
+// }
 
