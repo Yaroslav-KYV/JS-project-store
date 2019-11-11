@@ -5,6 +5,8 @@ import { signUp } from '../js/utils/api';
 import { newItemFetch } from '../js/utils/api';
 import { shopData } from '../js/utils/api';
 import store from '../js/store';
+import '../js/visa';
+import './displayItems/displayItems';
 
 
 
@@ -77,7 +79,6 @@ function takeData(e){
   }
 
 }
-
 
 
 

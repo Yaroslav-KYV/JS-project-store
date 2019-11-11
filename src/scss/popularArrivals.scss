@@ -2,10 +2,6 @@ body {
   margin: 0;
 }
 
-.popularArrivals {
-  width: 100%;
-}
-
 .popularArrivals h2 {
   font-family: "Cormorant Garamond", serif;
   font-size: 45px;
@@ -28,9 +24,9 @@ body {
 }
 
 .shopItems {
-  width: 1170px;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .item {
@@ -38,11 +34,11 @@ body {
   font-weight: 400;
   font-size: 15px;
   height: 443px;
+  margin-bottom: 50px;
 }
 
 .item_name {
   display: inline-block;
-
   font-family: "Poppins", sans-serif;
   font-size: 15px;
   margin-right: 25px;
@@ -95,13 +91,30 @@ body {
   height: 305px;
   background-color: #f5f5f5;
   padding-top: 25px;
-margin-bottom: 30px;
+  margin-bottom: 30px;
+}
+.item_img {
+  margin-bottom: 25px;
 }
 
+.item-name {
+  display: flex;
+  justify-content: space-between;
+}
 
+.store-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 45px;
+  font-weight: 300;
+  margin-top: 45px;
+  margin-bottom: 60px;
+}
 
 
 
 // .item_img {
 //   margin-bottom: 65px;
 // }
+button {
+  outline: none;
+}
