@@ -5,44 +5,43 @@ const totalPrice = document.querySelector('.cart__totalprice');
 const cartNotifier = document.querySelector('.cart__tag__notifier');
 
 // import itemsFromTestArray from '../page-categories/shoes.js'
-import itemsFromArray from '../js/store.js'
+import store from './store';
 
-let testOrder;
+
 let totPrice = 0;
 let totQuantity = 0;
 
+const storageCart = localStorage.getItem('carts') && JSON.parse(localStorage.getItem('carts')) || []
 
-/* taking cart items from test array (itemsFromTestArray) for test */
-let newArr = JSON.stringify(itemsFromArray.cart);
-
-/* saving test items to LocalStorage as ItemsInStock */
-localStorage.setItem('carts', newArr);
+if(storageCart.length > 0) {
+    store.cart = storageCart;
+}
 
 /* calculate total price and update it on DOM */
 const updateTotalPrice = () => {
-    let price = testOrder.reduce((acc, cur) => {
+    let price = store.cart.reduce((acc, cur) => {
         return acc += Number(cur.price) * Number(cur.quantity);
     }, 0);
     totalPrice.textContent = price;
 }
 
-/* Notifier for cart tag */
+/* Quantity items notifier for cart tag */
 const cartItemsNotifier = () => {
  
     if (cartTag.classList.contains('cart__tag--isopen')) {
         cartNotifier.classList.remove('cart__tag__notifier--enabled');
-    } else if (!cartTag.classList.contains('cart__tag--isopen') && JSON.parse(localStorage.getItem('carts')).length > 0) {
+    } else if (!cartTag.classList.contains('cart__tag--isopen') && localStorage.getItem('carts') && JSON.parse(localStorage.getItem('carts')).length > 0) {
         cartNotifier.classList.add('cart__tag__notifier--enabled');
         cartNotifier.textContent = totQuantity;
     }
 }
 
-/* taking test order and place it to cart */
+/* taking order and place it to DOM */
 
 const repaintCartContainer = () => {
     totPrice = 0;
     totQuantity = 0;
-    let stringPutToDom = testOrder.reduce((acc, cur) => {
+    let stringPutToDom = store.cart.reduce((acc, cur) => {
         totPrice += cur.price * cur.quantity;
         totQuantity += cur.quantity;
         return acc += `<li class="cart_item" data-id="${cur._id}">
@@ -72,11 +71,12 @@ const repaintCartContainer = () => {
     cartItemsNotifier();
 };
 
+/* exporting function to use it in addCart.js */
 export const updateCartContainer = () => {
-    testOrder = JSON.parse(localStorage.getItem('carts'));
     repaintCartContainer();
 }
 
+/* add/remove class to Cart body container */ 
 const cartOpenClose = (event) => {
     if (event.target === cartTag || event.target === cartTagImage) {
         cartTag.classList.toggle('cart__tag--isopen');
@@ -84,6 +84,7 @@ const cartOpenClose = (event) => {
     }
 }
 
+/* this function contain methods to remove item/increase...decrease quantity */ 
 const removeItem = (event) => {
     event.preventDefault();
     event.target.onmousedown = event.target.onselectstart = function() {
@@ -94,10 +95,14 @@ const removeItem = (event) => {
 
     if (event.target.dataset.but === 'remove' || event.target.parentNode.dataset.but === 'remove') {
         
-        testOrder.forEach((item, i) => {
+        store.cart.forEach((item, i) => {
             if (item._id === currentItem.dataset.id) {
-                testOrder.splice(i, 1);
-                localStorage.setItem('carts', JSON.stringify(testOrder));
+                store.cart.splice(i, 1);
+                localStorage.setItem('carts', JSON.stringify(store.cart));
+                store.cart = store.cart;
+                console.log(store.cart);
+                console.log('store.cart', store.cart);
+
             };
         updateCartContainer();
         });
@@ -107,10 +112,10 @@ const removeItem = (event) => {
         
         closestQuantityItem = event.target.closest('.quantity').querySelector('.cart__item__qty');
 
-        testOrder.forEach((item) => {
+        store.cart.forEach((item) => {
             if (item._id === currentItem.dataset.id && item.quantity >= 2) {
                 item.quantity -= 1;
-                localStorage.setItem('carts', JSON.stringify(testOrder));   
+                localStorage.setItem('carts', JSON.stringify(store.cart));   
                 closestQuantityItem.textContent = item.quantity;
                 updateTotalPrice();
 
@@ -122,10 +127,10 @@ const removeItem = (event) => {
         
         closestQuantityItem = event.target.closest('.quantity').querySelector('.cart__item__qty');
 
-        testOrder.forEach((item) => {
+        store.cart.forEach((item) => {
             if (item._id === currentItem.dataset.id && item.quantity <= 98) {
                 item.quantity += 1;
-                localStorage.setItem('carts', JSON.stringify(testOrder));    
+                localStorage.setItem('carts', JSON.stringify(store.cart));    
                 closestQuantityItem.textContent = item.quantity; 
                 updateTotalPrice(); 
        
@@ -137,5 +142,8 @@ const removeItem = (event) => {
 
 updateCartContainer();
 
+/* Listener for Cart Tag */ 
 cartTag.addEventListener('click', cartOpenClose);
+
+/* Listener for Remove item ico */ 
 cartItems.addEventListener('click', removeItem)

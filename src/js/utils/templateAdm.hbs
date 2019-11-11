@@ -1,0 +1,26 @@
+<div class="container_arrivals">
+  <h2 class="store-title">{{title}}</h2>
+  <div class="shopItems">
+    {{#each items}}
+    <div class="item">
+
+      <div class="item_imgContainer">
+        <img src=" {{src}} " class="item_img" width="250px">
+      </div>
+<div class="item-text">
+      <span class="item_name"> {{brandName}}</span>
+      <span class="item_desc">{{name}}</span>
+      </div>
+      <span class="item_price">{{price}} $</span>
+
+
+
+
+    <div class="item-buts">
+      <button class="DELETE btn" id="{{_id}}" data-action="delete"><i class="fas fa-times"></i></button>
+      <button class="EDIT btn" id="{{_id}}" data-action="edit"><i class="fas fa-pencil-alt"></i></button>
+    </div>
+ </div>
+    {{/each}}
+  </div>
+</div>

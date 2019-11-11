@@ -1,2 +1,69 @@
 
+  .DELETE{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25px;
+    width: 25px;
 
+    border-style: none;
+    color: rgb(255, 255, 255);
+    background-color: #bbbbbb;
+
+  }
+  .DELETE {font-size: 16px;}
+  .DELETE:hover {
+    background-color: red;
+    cursor: pointer;
+    transition: transform 0.1s linear;
+    transform: rotate(90deg);
+  }
+
+
+  .EDIT{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25px;
+    width: 25px;
+
+    border-style: none;
+    color: rgb(255, 255, 255);
+    background-color: #bbbbbb;
+    // margin-left: auto;
+
+  }
+  .EDIT:hover{
+    background-color:  #82f4d2;
+    cursor: pointer;
+    transition: transform 0.1s linear;
+    transform: rotate(90deg);
+  }
+
+
+
+
+
+
+.item-buts {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.item  {
+  position: relative;
+  // margin-right: 30px;
+}
+
+.shopItems {
+  justify-content: space-around;
+
+}
+// .item_name{
+//   text-align: right;
+// }
+
+.item-text{
+  display: flex;
+  justify-content: space-between;
+}
