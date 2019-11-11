@@ -16,11 +16,7 @@ const filtered = {
   }
 }
 
-const server = 'http://myshop.com.ua'
-const serverURL =
-      window.location.hostname.indexOf('localhost') !== -1
-        ? 'http://localhost:3000'
-        : server;
+
 
 
 
@@ -32,8 +28,6 @@ export function renderAll(shopData, isAdmin = false) {
 
   shopData.forEach(el => {
     const product = {...el}
-    const image = serverURL  + product.image;
-    product.image = image;
     if(product.category === 'men') {
       filtered.men.items.push(product);
     } else if(product.category === 'women') {

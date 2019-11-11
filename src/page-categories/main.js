@@ -13,9 +13,10 @@ import './rangeSlider';
 
 const categoriesArray = document.querySelector('.categories-array');
 getShopData().then(resData => {
-  store.shopData = resData.products;
+  store.shopData = resData;
+  console.log('resData', resData)
   console.log('store', store)
-  categoriesArray.innerHTML = renderAll(resData.products);
+  categoriesArray.innerHTML = renderAll(resData);
 })
 const arrElms = document.querySelectorAll('.categories-menu__button');
 const catMenu = document.querySelector('.categories-menu');
