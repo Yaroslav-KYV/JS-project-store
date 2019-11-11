@@ -1,17 +1,34 @@
+const refs = {
+  openModal: document.querySelector(".open-window"),
+  closeModal: document.querySelector(".close-window"),
+  backdrop: document.querySelector(".js-backdrop-modalwindow"),
+  sectionContainer: document.querySelector("#sec2")
+};
 
-// window.addEventListener('scroll', () => {
+refs.openModal.addEventListener("click", openModal);
+refs.closeModal.addEventListener("click", closeModal);
+refs.backdrop.addEventListener("click", handelBackdropClick);
 
-// });
-// const onEntry = (entries) => {
-// entries.forEach(entry => {
-//     console.log(entry);
-// })
-// };
+function openModal() {
+  document.body.classList.add("show-modalwindow");
+  window.addEventListener("keydown", closeModalESC);
+}
 
-// const observer = new IntersectionObserver(() => {}, {});
+function closeModal() {
+  document.body.classList.remove("show-modalwindow");
+  window.removeEventListener("keydown", closeModalESC);
+}
 
-// const sectionsObserv = document.querySelector('.for-oserv');
+function handelBackdropClick(e) {
+  if (e.target !== e.currentTarget) {
+    return;
+  }
+  closeModal();
+}
 
-// sectionsObserv.forEach(section => {
-//     observer.observe(Selection);
-// })
+function closeModalESC(e) {
+  if (e.code !== "Escape") {
+    return;
+  }
+  closeModal();
+}
