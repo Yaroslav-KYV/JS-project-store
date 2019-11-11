@@ -20,7 +20,8 @@ module.exports = {
     index: './src/page-index/main.js',
     about: './src/page-about/main.js',
     categories: './src/page-categories/main.js',
-    adminProducts: './src/page-admin-products/main.js'
+    adminProducts: './src/page-admin-products/main.js',
+    order: './src/page-order/main.js'
   },
 
   // how to write the compiled files to disk
@@ -129,6 +130,11 @@ module.exports = {
       template: './src/page-admin-products/tmpl.html',
       chunks: ['adminProducts'],
       filename: 'admin-products.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/page-order/tmpl.html",
+      chunks: ["order"],
+      filename: "order.html"
     }),
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css',
