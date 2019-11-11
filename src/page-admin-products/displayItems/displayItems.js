@@ -144,7 +144,7 @@ function openModalFn(button) {
 
 }
 
-
+store.src = [];
 // ====================== закрытие модалки
 const closeModal = e => {
   open.classList.add("modal-hidden");
@@ -159,7 +159,7 @@ function handleOverlay(event) {
 
  let imagesControl;
       imagesControl = shoes.src;
-      if (services.src.length === 0) {
+      if (store.src.length === 0) {
         imagesControl = ['./images/no-image.jpg'];
       }
 }
