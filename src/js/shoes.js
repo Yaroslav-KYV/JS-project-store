@@ -179,6 +179,19 @@ const store = [
     type: "Кросoвки",
     _id: "5dc3ccbd92a6q3r534635308ab3ab8f8",
   },
+  {
+    brandName: "Adidas",
+    src: '../img/store/a1.jpg',
+    category: "men",
+    image: "",
+    name: "ADIDAS 3MC",
+    popular: false,
+    price: 65,
+    size: 44,
+    quantity: 0,
+    color: 'black',
+    _id: "4dc3ccbd52a60307",
+  },
 ]
 
 export default store
