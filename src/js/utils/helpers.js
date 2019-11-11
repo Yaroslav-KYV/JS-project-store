@@ -16,11 +16,7 @@ const filtered = {
   }
 }
 
-const server = 'http://myshop.com.ua'
-const serverURL =
-      window.location.hostname.indexOf('localhost') !== -1
-        ? 'http://localhost:3000'
-        : server;
+
 
 
 
@@ -31,14 +27,13 @@ export function renderAll(shopData, isAdmin = false) {
   filtered.kids.items = [];
 
   shopData.forEach(el => {
-    const image = serverURL  + el.image;
-    el.image = image;
-    if(el.category === 'men') {
-      filtered.men.items.push(el);
-    } else if(el.category === 'women') {
-      filtered.women.items.push(el);
+    const product = {...el}
+    if(product.category === 'men') {
+      filtered.men.items.push(product);
+    } else if(product.category === 'women') {
+      filtered.women.items.push(product);
     } else {
-      filtered.kids.items.push(el);
+      filtered.kids.items.push(product);
     }
   })
 

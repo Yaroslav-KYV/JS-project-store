@@ -92,8 +92,8 @@ goods.addEventListener("click", handleListClick);
 const isAdmin = true;
 
 getShopData().then(resData => {
-  store.shopData = resData.products;
-  goods.innerHTML = renderAll(resData.products, isAdmin);
+  store.shopData = resData;
+  goods.innerHTML = renderAll(resData, isAdmin);
 });
 
 // const modalMarkup = teplateForm(здесь данные[0])
