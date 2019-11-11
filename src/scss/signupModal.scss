@@ -1,0 +1,60 @@
+// modal---------------
+
+.signup-modal__wrapper {
+	position: fixed;
+	right: -100%;
+	top: 0;
+	width: 100%;
+	height: 100vh;
+	background: rgba(0, 0, 0, .5);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	z-index: 111;
+	visibility: hidden;
+	opacity: 0;
+	transition: .3s ease-in-out;
+  }
+  
+  .signup-modal__wrapper.active {
+	opacity: 1;
+	transform: translateX(-100%);
+	visibility: visible;
+  }
+  
+  .signup-modal {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	padding: 50px 40px;
+	width: 600px;
+	height: 600px;
+	border-radius: 10px;
+	background: #fff;
+  }
+  
+  .signup-modal__h2 {
+	font-family: 'Poppins', sans-serif;
+	font-size: 18px;
+	line-height: 1.4;
+	font-weight: 700;
+	color: #000000;
+	padding-bottom: 15px;
+  }
+  
+  .signup-modal__p {
+	font-family: 'Poppins', sans-serif;
+	font-size: 15px;
+	line-height: 1.4;
+	font-weight: 400;
+	color: #000000;
+  }
+  
+  .signup-modal__close {
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	font-size: 20px;
+	background: transparent;
+	border: none;
+  }
