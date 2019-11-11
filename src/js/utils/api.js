@@ -1,12 +1,10 @@
 import shopData from '../shoes.js'
 export const getShopData = () => {
-
-  return Promise.resolve(shopData)
-
+  return fetch('http://localhost:3000/api/products').then(res => res.json());
 }
 
 
-export const signUp = (userData) => {
+export const signIn = (userData) => {
   return fetch('http://localhost:3000/api/auth/signin', {
     method: 'POST',
     headers: {
