@@ -7,7 +7,6 @@
     transition: 0.5s;
     right: 0px;
     top: 150px;
-    padding: 16px 14px 13px 14px;
     border-radius: 10px 0 0 10px;
     background: rgba(53, 53, 53, .7);
     z-index: 101;
@@ -17,6 +16,39 @@
     transition: 1s;
     right: 350px;
     top: 150px;
+}
+
+.cart__tag__notifier {
+    display: none;
+    position: absolute;
+    font-size: 14px;
+    font-family: sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    text-decoration: none;
+    top: -6px;
+    left: -6px;
+    background-color: red;
+    color: white;
+    border-radius: 10px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+}
+
+.cart__tag__notifier--enabled {
+    display: block;
+}
+
+.cart__tagimage {
+    width: 60px;
+    padding: 16px 14px 13px 14px;
+}
+
+.cart__tagimage:hover,
+.cart__tagimage:focus {
+    cursor: pointer;
 }
 
 .cart {
@@ -55,7 +87,7 @@
     margin-bottom: 20px;
     border-radius: 10px;
     // background: rgba(255, 255, 255, 0.1);
-    background: #82f4d3;
+    background: rgba(130, 244, 211, .9);
 }
 
 .cart__descwrapper {
@@ -65,20 +97,30 @@
 }
 
 .quantity {
-    width: 75px;
+    width: 45px;
     text-align: center;
 }
 
-.cart__item__qtu__minus {
+.cart__item__qty__minus {
     position: absolute;
-    top: 29px;
-    right: 55px;
+    top: 23px;
+    right: 41px;
 }
 
-.cart__item__qtu__plus {
+.cart__item__qty__minus:hover,
+.cart__item__qty__minus:focus {
+    cursor: pointer;
+}
+
+.cart__item__qty__plus {
     position: absolute;
-    top: 29px;
-    right: 4px;
+    top: 23px;
+    right: 9px;
+}
+
+.cart__item__qty__plus:hover,
+.cart__item__qty__plus:focus {
+    cursor: pointer;
 }
 
 .cart__item__qty {
@@ -86,27 +128,36 @@
     color: #666;
 }
 
-.cart__close__item {
+.cart__remove__item {
     position: absolute;
     top: -11px;
     right: -11px;
 }
 
+.cart__remove__item:hover,
+.cart__remove__item:focus {
+    cursor: pointer;
+}
+
 .cart__item__img {
     border-radius: 10px 0 0 10px;
-    margin-right: 20px;
+    margin-right: 15px;
+    width: 60px;
+    height: 60px;
 }
 
 .cart__item__description {
     display: flex;
+    overflow: hidden;
     flex-direction: column;
-    width: 160px;
+    width: 185px;
 }
 
 .cart__item__name {
     font-size: 14px;
     line-height: 24px;
     font-weight: 200;
+    white-space: nowrap;
     color: #787878;
     font-style: italic;
 }
@@ -114,7 +165,7 @@
 .cart__item__price {
     font-size: 16px;
     line-height: 24px;
-    font-weight: 200;
+    font-weight: 400;
     color: #1c534d;
 }
 
