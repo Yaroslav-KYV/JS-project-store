@@ -4,9 +4,7 @@ import './addToCart';
 
 
 getShopData().then(resData => {
-  console.log('resData', resData);
   store.shopData = resData;
-  console.log(store)
 });
 
 let toggled = false;
