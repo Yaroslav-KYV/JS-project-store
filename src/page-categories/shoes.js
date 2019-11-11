@@ -8,7 +8,7 @@ const store = [
     image: "",
     name: "",
     popular: false,
-    price: 0,
+    price: 100,
     size: 36,
     type: "Кросoвки",
     _id: "5dc3ccbd92a65308ab3ab8f8",
