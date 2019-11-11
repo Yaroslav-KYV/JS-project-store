@@ -11,6 +11,7 @@ import './displayItems/displayItems';
 
 
 
+
 const addItemForm = document.querySelector('.AddNewItem');
 const loginFrom = document.querySelector('.login');
 const select = document.querySelector('.select');
@@ -52,7 +53,7 @@ const newItem = [];
 
 addItemForm.addEventListener('submit', takeData)
 
-function takeData(e){
+export function takeData(e){
   e.preventDefault();
   const { image, price, description, fullDescription, name , category} = e.target.elements;
   const obj = {
