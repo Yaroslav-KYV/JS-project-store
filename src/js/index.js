@@ -6,7 +6,7 @@ import './addToCart';
 getShopData().then(resData => {
   console.log('resData', resData);
   store.shopData = resData;
-  console.log(store)
+  console.log('store', store)
 });
 
 let toggled = false;
