@@ -1,5 +1,8 @@
 export default {
   shopData: [],
   cart: [],
-  categoriesFilter: {}
+  categoriesFilter: {},
+  admin: {
+    auth: false,
+  }
 }

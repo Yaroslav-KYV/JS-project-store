@@ -37,10 +37,10 @@
 
         <!-- поиск -->
     <div class="search">
-      <form class="search-form">
+      <form id="search-form" class="search-form">
         <div class="block-div">
           <div class="form-group">
-          <input class="form-control" type="text" placeholder="Search" />
+          <input name="input" class="form-control" type="text" placeholder="Search" />
         </div>
 
           <button type="submit" class="btn" >Search</button>
@@ -49,47 +49,44 @@
         <div class="block-div">
                 <div class="form-group">
                     <label for="make">
-                      Brand:
+                      Select Brand:
                     </label>
-                    <select id="make" data-filter="make" class="filter-make filter form-control">
-                      <option value="">Select Brand</option>
-                      <option value="">Nike</option>
-                      <option value="">Adidas</option>
-                      <option value="">Show All</option>
+                    <select name="brandName" id="make" data-filter="make" class="filter-make filter form-control">
+                      <option value="all">All</option>
+                      <option value="Nike">Nike</option>
+                      <option value="Adidas">Adidas</option>
                     </select>
                   </div>
                   <div class="form-group">
                     <label for="model">
-                      Color:
+                      Select Color:
                     </label>
-                    <select id="model" data-filter="model" class="filter-model filter form-control">
-                      <option value="">Select Color</option>
-                      <option value="">White</option>
-                      <option value="">Pink</option>
-                      <option value="">Blue</option>
-                      <option value="">Red</option>
-                      <option value="">Gray</option>
-                      <option value="">Black</option>
-                      <option value="">Show All</option>
+                    <select name ="color" data-filter="model" class="filter-model filter form-control">
+                      <option value="all">All</option>
+                      <option value="White">White</option>
+                      <option value="Pink">Pink</option>
+                      <option value="Blue">Blue</option>
+                      <option value="Red">Red</option>
+                      <option value="Gray">Gray</option>
+                      <option value="Black">Black</option>
                     </select>
                   </div>
                   <div class="form-group">
                     <label for="model">
-                      Size:
+                        Select Size:
                     </label>
-                    <select data-filter="type" class="filter-type filter form-control">
-                      <option value="">Select Size</option>
-                      <option value="">36</option>
-                      <option value="">37</option>
-                      <option value="">38</option>
-                      <option value="">39</option>
-                      <option value="">40</option>
-                      <option value="">41</option>
-                      <option value="">42</option>
-                      <option value="">43</option>
-                      <option value="">44</option>
-                      <option value="">45</option>
-                      <option value="">Show All</option>
+                    <select name="size" data-filter="type" class="filter-type filter form-control">
+                      <option value="all">  All</option>
+                      <option value="36">36</option>
+                      <option value="37">37</option>
+                      <option value="38">38</option>
+                      <option value="39">39</option>
+                      <option value="40">40</option>
+                      <option value="41">41</option>
+                      <option value="42">42</option>
+                      <option value="43">43</option>
+                      <option value="44">44</option>
+                      <option value="45">45</option>
                     </select>
                   </div>
                   <div class="form-group">
