@@ -7,14 +7,15 @@ import '../js/cart.js';
 import { getShopData } from '../js/utils/api';
 import store from '../js/store';
 import { renderAll } from '../js/utils/helpers';
+import './rangeSlider';
 
 
 
 const categoriesArray = document.querySelector('.categories-array');
 getShopData().then(resData => {
-  store.shopData = resData;
+  store.shopData = resData.products;
   console.log('store', store)
-  categoriesArray.innerHTML = renderAll(resData);
+  categoriesArray.innerHTML = renderAll(resData.products);
 })
 const arrElms = document.querySelectorAll('.categories-menu__button');
 const catMenu = document.querySelector('.categories-menu');
@@ -34,6 +35,26 @@ catMenu.addEventListener('click', (e)=> {
   console.log('filteredStore', filteredStore)
   categoriesArray.innerHTML = renderAll(filteredStore);
 })
-// const filteredArr =  [].filter((el) => el.name.toLowerCase().includes(input.toLowerCase()) ||  )
-// renderAll(filteredArr);
-const searchForm = document.getElementById('search-form');
+
+const brandName = document.getElementById('search-form');
+
+brandName.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const { size, color, brandName, input} = e.target.elements;
+  console.log('size', size.options)
+  console.log('size.value', size.options[size.selectedIndex].value)
+  const sizeValue = size.options[size.selectedIndex].value
+  const brandNameValue = brandName.options[brandName.selectedIndex].value.toLowerCase()
+  const colorValue = color.options[color.selectedIndex].value
+  const filteredArr = store.shopData.filter((el) => (!input.value !== '' ? el.name.toLowerCase().includes(input.value.toLowerCase()) : true)
+  && (brandNameValue !== 'all' ? el.brandName === brandNameValue : true)
+  && (sizeValue !== 'all' ? el.size === +sizeValue : true)
+  && (colorValue !== 'all' ? el.color === colorValue : true))
+  console.log('filteredArr', filteredArr)
+  categoriesArray.innerHTML = renderAll(filteredArr);
+})
+
+
+
+
+
