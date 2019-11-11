@@ -1,0 +1,125 @@
+// modal---------------
+
+.signup-modal__wrapper {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, .5);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  z-index: 111;
+  // visibility: hidden;
+  // opacity: 0;
+  // transition: .3s ease-in-out;
+}
+
+.signup-modal__wrapper.active {
+  opacity: 1;
+  transform: translateX(-100%);
+  visibility: visible;
+}
+
+.signup-modal {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 60px 60px;
+  width: 450px;
+  height: 600px;
+  border-radius: 3px;
+  background: #fff;
+}
+
+.footer-nav__logo {
+  position: absolute;
+  left: 50%;
+  top: 30px;
+  transform: translate(-50%, -50%);
+}
+
+.signup-modal__h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 22px;
+  line-height: 1.4;
+  font-weight: 700;
+  color: #000000;
+  padding-bottom: 15px;
+  text-align: center;
+}
+
+.signup-modal__p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  line-height: 1.4;
+  font-weight: 400;
+  color: #000000;
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+.signup-modal__close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 20px;
+  background: transparent;
+  border: none;
+}
+
+.signup-modal_form {
+//   padding-bottom: 100px;
+}
+
+.signup-modal_email {
+  width: 100%;
+  height: 40px;
+  border: none;
+  border: 1px solid #757575;
+  border-radius: 3px;
+
+  margin-bottom: 20px;
+}
+
+.signup-modal_date {
+  width: 45%;
+  height: 40px;
+  border: none;
+  border: 1px solid #757575;
+  border-radius: 3px;
+
+  margin-bottom: 20px;
+}
+
+.signup-modal_preference {
+  width: 45%;
+  height: 40px;
+  border: none;
+  border: 1px solid #757575;
+  border-radius: 3px;
+
+  margin-bottom: 20px;
+}
+
+.signup-modal__btn {
+  width: 100%;
+  height: 40px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 3px;
+
+  margin-bottom: 20px;
+}
+
+.signup-modal__police {
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  line-height: 1.4;
+  font-weight: 400;
+  color: #000000;
+  text-align: center;
+  padding-bottom: 15px;
+}

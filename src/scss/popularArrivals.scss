@@ -60,10 +60,13 @@ body {
 .item_cart {
   opacity: 0;
   position: absolute;
-  top: 9px;
-  left: 10px;
-  width: 230px;
-  height: 286px;
+  top: 0.5*0.95*312px;
+  // left: 10px;
+  left: 50%;
+  transform: translate(-50%, -47%);
+
+  width: 95%;
+  height: 0.95*312px;
   background-color: rgba(144, 243, 215, 0.8);
 }
 
@@ -108,11 +111,6 @@ body {
   margin-bottom: 60px;
 }
 
-
-
-// .item_img {
-//   margin-bottom: 65px;
-// }
 button {
   outline: none;
 }

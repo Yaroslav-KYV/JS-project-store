@@ -11,7 +11,10 @@
   left: 0;
   width: 100%;
   height: 100%;
+
+
   background-color: rgba(37, 45, 58, 0.7);
+  margin: 0 auto;
 }
 
 .modal-hidden {
@@ -20,9 +23,9 @@
 
 .modal-content {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  // top: 50%;
+  // left: 50%;
+  // transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -84,9 +87,9 @@
   display: inline-block;
   margin-bottom: 15px;
   border: none;
-  width: 360px;
-  height: 42px;
-  padding: 10px;
+  // width: 360px;
+  // height: 42px;
+  // padding: 10px;
   background-color: #e9e9e9;
   font-family: inherit;
   font-size: 14px;
