@@ -2,7 +2,7 @@
 
   <section class="categories-promo">
 
-
+    <!-- видео -->
     <div class="video-box">
       <video loop autoplay>
         <source src="../videos/videoplayback.mp4" type="video/mp4">
@@ -12,6 +12,7 @@
       </div>
     </div>
 
+    <!-- слайдер -->
     <div class="autoplay">
       <div><img class="autoplay__img" src="../img/categories/adidas.webp" alt="Adidas"></div>
       <div><img class="autoplay__img" src="../img/categories/Asics.webp" alt="Asics"></div>
@@ -25,6 +26,7 @@
     </div>
   </section>
 
+  <!-- меню -->
   <section class="categories-shoes">
     <ul class="categories-menu">
       <li class="categories-menu__item"><button class="categories-menu__button">All</button></li>
@@ -32,6 +34,71 @@
       <li class="categories-menu__item"><button class="categories-menu__button">Women</button></li>
       <li class="categories-menu__item"><button class="categories-menu__button">Kids</button></li>
     </ul>
+
+        <!-- поиск -->
+    <div class="search">
+      <form class="search-form">
+        <div class="block-div">
+          <div class="form-group">
+          <input class="form-control" type="text" placeholder="Search" />
+        </div>
+
+          <button type="submit" class="btn" >Search</button>
+        </div>
+
+        <div class="block-div">
+                <div class="form-group">
+                    <label for="make">
+                      Brand:
+                    </label>
+                    <select id="make" data-filter="make" class="filter-make filter form-control">
+                      <option value="">Select Brand</option>
+                      <option value="">Nike</option>
+                      <option value="">Adidas</option>
+                      <option value="">Show All</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="model">
+                      Color:
+                    </label>
+                    <select id="model" data-filter="model" class="filter-model filter form-control">
+                      <option value="">Select Color</option>
+                      <option value="">White</option>
+                      <option value="">Pink</option>
+                      <option value="">Blue</option>
+                      <option value="">Red</option>
+                      <option value="">Gray</option>
+                      <option value="">Black</option>
+                      <option value="">Show All</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="model">
+                      Size:
+                    </label>
+                    <select data-filter="type" class="filter-type filter form-control">
+                      <option value="">Select Size</option>
+                      <option value="">36</option>
+                      <option value="">37</option>
+                      <option value="">38</option>
+                      <option value="">39</option>
+                      <option value="">40</option>
+                      <option value="">41</option>
+                      <option value="">42</option>
+                      <option value="">43</option>
+                      <option value="">44</option>
+                      <option value="">45</option>
+                      <option value="">Show All</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                      <div id="range-slider"></div>
+                  </div>
+        </div>
+      </form>
+    </div>
+
     <div class="categories-array"></div>
   </section>
 
@@ -44,10 +111,4 @@
       </div>
     </section>
 
-
-
-  </div>
-
-
-
-
+</div>

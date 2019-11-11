@@ -7,6 +7,8 @@ import '../js/cart.js';
 import { getShopData } from '../js/utils/api';
 import store from '../js/store';
 import { renderAll } from '../js/utils/helpers';
+import './rangeSlider';
+
 
 const categoriesArray = document.querySelector('.categories-array');
 
@@ -39,6 +41,17 @@ catMenu.addEventListener('click', (e)=> {
   categoriesArray.innerHTML = renderAll(filteredStore);
 })
 
-//    div#idapp
-// copy js
-// copy scss
+const brandName = document.getElementById('search-form');
+
+const filteredArr = store.filter((el) => el.brandName.toLowerCase().includes(input.toLowerCase()) ||
+el.name === input || el.color === input || el.size === input  || el.priceçç)
+
+brandName.addEventListener('submit', () => {
+  filteredStore = filteredArr;
+  // categoriesArray.innerHTML = renderAll(filteredArr);
+})
+
+
+
+
+
