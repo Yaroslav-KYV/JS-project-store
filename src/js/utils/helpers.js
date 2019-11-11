@@ -17,18 +17,23 @@ const filtered = {
 }
 
 
+
+
+
+
 export function renderAll(shopData, isAdmin = false) {
   filtered.men.items = [];
   filtered.women.items = [];
   filtered.kids.items = [];
 
   shopData.forEach(el => {
-    if(el.category === 'men') {
-      filtered.men.items.push(el);
-    } else if(el.category === 'women') {
-      filtered.women.items.push(el);
+    const product = {...el}
+    if(product.category === 'men') {
+      filtered.men.items.push(product);
+    } else if(product.category === 'women') {
+      filtered.women.items.push(product);
     } else {
-      filtered.kids.items.push(el);
+      filtered.kids.items.push(product);
     }
   })
 
