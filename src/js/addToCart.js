@@ -19,7 +19,6 @@ categories.addEventListener('click', (e) => {
     } else {
       store.cart.push(targetEl)
     }
-
     localStorage.setItem('carts', JSON.stringify(store.cart));
     updateCartContainer();
     console.log('store.cart', store.cart)
