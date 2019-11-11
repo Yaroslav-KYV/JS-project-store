@@ -1,0 +1,29 @@
+
+.display-products {
+  width: 100%;
+}
+
+.products-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 45px;
+  font-weight: 300;
+  margin-top: 45px;
+  margin-bottom: 60px;
+}
+
+.container_arrivals {
+  width: 1170px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 25px;
+  min-height: 635px;
+  width: 1170px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.shopItems {
+  width: 1170px;
+  display: flex;
+  justify-content: space-between;
+}
+
