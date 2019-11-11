@@ -5,31 +5,31 @@
     <meta name="viewport" content="width=HE, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
-    <link rel="stylesheet" href="./about.css" />
+    <!-- <link rel="stylesheet" href="./about.css" /> -->
   </head>
   <body>
     <!-- section 1 -->
-    <section class="about-section-first for-oserv">
+    <section class="about-section-first">
       <img
         class="about-background"
         src="/src/img/section-about/bout12.jpg"
         alt="spott shoes"
       />
-      <!-- <div class="about-wrapper"> -->
-      <div class="title-container">
-        <h2 class="about-title">
-          We will help you become the best version of yourself
-        </h2>
-        <p class="about-text">
-          We will make the quality of your life better
-        </p>
+      <div class="about-container_head" id="sec1">
+        <div class="title-container">
+          <h2 class="about-title">
+            We will help you become the best version of yourself
+          </h2>
+          <p class="about-text">
+            We will make the quality of your life better
+          </p>
+        </div>
       </div>
-      <!-- </div> -->
     </section>
 
     <!-- section 2 -->
-    <section class="for-oserv">
-      <div class="about-container">
+    <section>
+      <div class="about-container" id="sec2">
         <div class="about-section-two">
           <img
             class=""
@@ -44,7 +44,7 @@
             width="500"
           />
         </div>
-        <div class="about-us">
+        <div class="about-section-two__wrapper">
           <h1>About Us</h1>
           <p class="">
             We are an online store of modern trendy sports shoes and
@@ -52,13 +52,14 @@
             and financial capabilities. Every season we replenish our online
             store with relevant news.
           </p>
+          <button class="open-window">Reed more...</button>
         </div>
       </div>
     </section>
 
     <!-- section 3 -->
-    <section class="for-oserv">
-      <div class="about-container">
+    <section>
+      <div class="about-container" id="sec3">
         <div class="about-section-three">
           <img
             class=""
@@ -87,8 +88,8 @@
     </section>
 
     <!-- section 4 -->
-    <section class="for-oserv">
-      <div class="about-container">
+    <section>
+      <div class="about-container" id="sec4">
         <div class="about-section-four">
           <img
             class=""
@@ -123,8 +124,8 @@
     </section>
 
     <!-- section 5 -->
-    <section class="for-oserv">
-      <div class="about-container">
+    <section>
+      <div class="about-container" id="sec5">
         <div class="about-section-five">
           <img
             class=""
@@ -132,18 +133,6 @@
             alt="spott shoes"
             width="460"
           />
-          <!-- <img
-            class=""
-            src="/src/img/section-about/about2.png"
-            alt="spott shoes"
-            width="370"
-          />
-          <img
-            class=""
-            src="/src/img/section-about/about3.jpg"
-            alt="spott shoes"
-            width="320"
-          /> -->
         </div>
         <div class="about-section-five__wrapper">
           <h2 class="about-section-five__title">
@@ -155,5 +144,68 @@
         </div>
       </div>
     </section>
+
+    <!-- modal window -->
+
+    <div class="backdrop-modalwindow js-backdrop-modalwindow">
+      <div class=" about-section-two__wrapperModal">
+        <div class="modal-pic">
+          <img
+            class=""
+            src="/src/img/section-about/about2.png"
+            alt="spott shoes"
+            width="370"
+          />
+          <img
+            class=""
+            src="/src/img/section-about/shoes19.jpg"
+            alt="spott shoes"
+            width="370" 
+          />
+        </div>
+        <div class="modal-text">
+          <h1>About shoes</h1>
+          <p class="about-shoes">
+          
+            
+            Here's everything you always wanted to know about running shoes, but
+            were afraid to ask: What is the best running shoe? There is only the
+            best running shoe for you. Because each runner is unique in how much
+            they train, and what their running style, there is no "perfect"
+            running shoe. The best running shoe for you depends entirely on the
+            shape of your foot, your bio-mechanics and on the amount of running
+            you do. Running shoes are designed to protect your feet from the
+            road, provided traction on different surfaces, cushion the landing
+            shock and support your feet. Not too much to ask, or is it? Key
+            points on picking the right running shoe: If you experiment,you're
+            not alone. Picking the right shoes for running is more of an art
+            than a science. Many runners experiment with different brands and
+            models until they find just the right fit, feel and functionality.
+            To shorten your trial and error path follow these steps: Buy shoes
+            designed for running: Running shoes are designed to handle the shock
+            of 2.5 times your body weight that is created by the impact each
+            time your foot strikes the ground. When you're running, you want to
+            have excellent cushioning in both the heel and forefoot to handle
+            this impact. If you plan on running three times a week or more, move
+            up to a real running shoe. Why buy a real running shoe? Because you
+            want to LOOK FAST of course. OK, really, running shoes provide the
+            best protection for your feet, legs and body from the repeated
+            stress of thousands of foot landings per mile. Each time you take a
+            stride and land, your foot has to absorb two to three times your
+            body weight. This repeated impact is different from other sports.
+            Running shoes have built-in features that enable you to run day
+            after day more comfortably and with less chance of over-use injury.
+            Here are some of the advantages of running shoes: Superior
+            Cushioning Flexibility in the right places Stability or Motion
+            control Traction on road or trails Tortional stability – stiff where
+            needed Night-time reflectivity Breathability Feet first: Before you
+            buy Even before you step inside a store, you need to know what type
+            of foot you have. Yeah, it's a stinky job, but somebody's gotta look
+            at your feet. 
+          </p>
+          <button class="close-window">Close</button>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

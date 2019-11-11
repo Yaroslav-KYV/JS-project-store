@@ -1,6 +1,5 @@
 /* секция 1 */
 .about-section-first {
-  position: relative;
   margin-bottom: 60px;
 }
 .about-background {
@@ -9,12 +8,17 @@
   height: auto;
   margin: 0 auto;
 }
-
+.about-container_head {
+  position: relative;
+  width: 1170px;
+  margin: 0 auto;
+  top: -700px;
+}
 .title-container {
   position: absolute;
   top: 120px;
   right: 10px;
-  width: 600px;
+  width: 620px;
 }
 
 .about-title {
@@ -36,10 +40,10 @@
   line-height: 60px;
   color: #888888;
   line-height: 30px;
+  text-align: center;
 }
 
-/* секция 2 */
-
+// container for sections
 .about-container {
   position: relative;
   width: 1170px;
@@ -50,20 +54,31 @@
   transform: scale(1.02);
   transition: transform 0.5s;
 }
+
+/* секция 2 */
 .about-section-two {
   display: flex;
   flex-direction: column;
-  box-shadow: inset 2px 2px 5px rgba(154, 147, 140, 0.5),
-    1px 1px 5px rgba(255, 255, 255, 1);
-  /* box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22); */
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
-.about-us {
+.about-section-two__wrapper {
   width: 600px;
   position: absolute;
   font-size: 30px;
   right: 20px;
   top: 100px;
   color: rgb(51, 51, 99);
+  margin-bottom: 100px;
+}
+.open-window {
+  font-family: "Poppins", sans-serif;
+  width: 145px;
+  height: 47px;
+  border: none;
+  background-color: #82f4d3;
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 60px;
 }
 
 /* секция 3 */
@@ -72,9 +87,7 @@
   flex-direction: column;
   align-items: flex-end;
   margin-bottom: 60px;
-  box-shadow: inset 2px 2px 5px rgba(154, 147, 140, 0.5),
-    1px 1px 5px rgba(255, 255, 255, 1);
-  /* box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22); */
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 .about-section-three__wrapper {
   position: absolute;
@@ -90,9 +103,7 @@
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  box-shadow: inset 2px 2px 5px rgba(154, 147, 140, 0.5),
-    1px 1px 5px rgba(255, 255, 255, 1);
-  /* box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22); */
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   margin-bottom: 60px;
 }
 
@@ -105,16 +116,74 @@
 }
 
 /* 5 */
-.about-section-five__wrapper {
-    width: 500px;
-    position: absolute;
-    right: 30px;
-    top: 120px;
-    color: rgb(51, 51, 99);
-    font-size: 30px;
-}
 .about-section-five {
-    box-shadow: inset 2px 2px 5px rgba(154, 147, 140, 0.5),
+  // box-shadow: inset 2px 2px 5px rgba(154, 147, 140, 0.5),
+  // 1px 1px 5px rgba(255, 255, 255, 1);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  margin-bottom: 60px;
+  margin-bottom: 100px;
+}
+.about-section-five__wrapper {
+  width: 500px;
+  position: absolute;
+  right: 30px;
+  top: 120px;
+  color: rgb(51, 51, 99);
+  font-size: 30px;
+}
+
+// madal window
+body.show-modalwindow .backdrop-modalwindow {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: initial;
+}
+body.show-modalwindow .about-section-two__wrapperModal {
+  transform: scale(1);
+}
+.backdrop-modalwindow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  // height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 200ms, visibility 200ms;
+}
+.about-section-two__wrapperModal {
+  display: flex;
+  padding: 20px;
+  max-width: 1100px;
+  min-height: 500px;
+  background-color: rgb(250, 244, 244);
+  box-shadow: inset 2px 2px 5px rgba(154, 147, 140, 0.5),
     1px 1px 5px rgba(255, 255, 255, 1);
-    margin-bottom: 100px;
+
+  transform: scale(1.1);
+  transition: transform 0.5s;
+}
+
+.close-window {
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  width: 145px;
+  height: 47px;
+  border: none;
+  background-color: #82f4d3;
+  font-size: 15px;
+  font-weight: 600;
+}
+.modal-text {
+  width: 600px;
+  padding: 30px;
+}
+.about-shoes {
+  padding: 15px 6px;
 }
