@@ -170,11 +170,10 @@ secondBut.addEventListener("click", closeModal);
 liteboxOver.addEventListener("click", handleOverlay);
 
 goods.addEventListener("click", handleListClick);
-const isAdmin = true;
 
 getShopData().then(resData => {
   store.shopData = resData;
-  goods.innerHTML = renderAll(resData, isAdmin);
+  goods.innerHTML = renderAll(resData, 'admin');
 });
 
 

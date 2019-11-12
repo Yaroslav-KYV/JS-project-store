@@ -1,5 +1,6 @@
 import catTempl from './template.hbs';
 import catTemplAdm from './templateAdm.hbs';
+import popularTempl from './popular.hbs';
 
 const filtered = {
   men: {
@@ -21,7 +22,7 @@ const filtered = {
 
 
 
-export function renderAll(shopData, isAdmin = false) {
+export function renderAll(shopData, type = null) {
   filtered.men.items = [];
   filtered.women.items = [];
   filtered.kids.items = [];
@@ -41,9 +42,12 @@ console.log(filtered);
   let markup = '';
   Object.keys(filtered).forEach(key => {
     if(filtered[key].items.length > 0) {
-      if(isAdmin) {
+      if(type === 'admin') {
         markup += catTemplAdm(filtered[key]);
 
+      }else if (type === 'popular') {
+
+        markup += popularTempl(filtered[key]);
       }else {
 
         markup += catTempl(filtered[key]);
