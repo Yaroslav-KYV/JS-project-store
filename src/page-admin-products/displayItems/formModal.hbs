@@ -1,23 +1,23 @@
- <form class="sub-form adForm js-ad-form" action="#">
+<form class="AddNewItem sub-form adForm js-ad-form" action="#">
+      <h2>Edit product</h2>
 
-      <input class="sub-form-input" type="text" placeholder="Your Email Here">
-        <label>title</label>
-        <input required type="text" name="title" value="{{title}}" />
-        <label>Заголовок</label>
-        <input required type="text" name="title" value="{{brandName}}" />
-        <label>description</label>
-         <textarea name="description" value="">{{name}}</textarea>
-        <label>Ціна</label>
-        <input required type="tel" name="price" value="{{price}}" />
+  <div class="wrap_img_add">
+    <span id="outputMulti"></span>
+  </div>
+      <input  id="fileMulti" class="image" value="{{image}}" type="file" placeholder="Image Url" name="images"  accept="image/x-png,image/gif,image/jpeg,image/jpg">
+      <input type="text" placeholder="Item name" name="name" value="{{name}}" >
+      <input type="text" placeholder="Description" name="description" value="{{brandName}}">
+      <textarea  placeholder="Full Description" name="fullDescription" value="{{name}}"></textarea>
+      <input type="text" placeholder="Price" name="price" value="{{price}}">
 
-
-        <label>Choose picture</label>
-        <div class="wrap_img_add">
-          <span id="outputMulti"></span>
-        </div>
-        <input type="file" id="fileMulti" name="images" multiple accept="image/x-png,image/gif,image/jpeg,image/jpg"
-          value="{{src}}" />
-        <button class="sub-form-btn" data-action="edit">Edit</button>
-
-
+      <select value={{category}} name="Category" class="select">
+        {{#each categories}}
+          {{#if value}}
+            <option selected value="{{titleValue}}">{{title}}</option>
+          {{else}}
+            <option value="{{titleValue}}">{{title}}</option>
+          {{/if}}
+        {{/each }}
+      </select>
+      <br><button type='submit' class="sub-form-btn addItemButton" data-action="edit">Edit</button>
     </form>
