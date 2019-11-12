@@ -1,0 +1,105 @@
+<div class="full-checkout">
+  <section class="order-width confirm-offer">
+    <h2 class="checkout">Оформлене заказа</h2>
+    <div class="users-btn">
+      <a class="new-user" href="">Новый пользователь</a>
+      <a class="new-user" href="">Постоянный покупатель</a>
+    </div>
+    <div class="user">
+      <p class="user-info">Имя</p>
+      <input type="text" autocomplete="on">
+    </div>
+    <div class="user">
+      <p class="user-info">Фамилия</p>
+      <input type="text">
+    </div>
+    <div class="user">
+      <p class="user-info">Отчество</p>
+      <input type="text">
+    </div>
+    <div class="user">
+      <p class="user-info">E-mail</p>
+      <input type="email" placeholder="example@google.com">
+    </div>
+    <div class="user">
+      <p class="user-info">Контактный телефон</p>
+      <input type="tel" placeholder="+38(__) ___-__-__">
+    </div>
+    <div class="user">
+      <p class="user-info">Город</p>
+      <input type="text" autocomplete="on">
+    </div>
+    <div class="user">
+      <p class="user-info">Способ доставки</p>
+      <select name="delivery method">
+        <option value="1">Новая почта(наложенный платёж)</option>
+        <option value="2" selected>Доставка Курьером Новой Почты</option>
+      </select>
+      <p class="attention">В случае обмена / возврата товара (в том числе в ситуации, когда Вам не подошел размер) стоимость обратной
+        доставки ОПЛАЧИВАЕТ ПОКУПАТЕЛЬ.</p>
+    </div>
+    <div class="user">
+      <p class="user-info">Адрес</p>
+      <input type="text">
+    </div>
+    <div class="user">
+      <p class="user-info">Способо оплаты</p>
+      <select name="payment-method">
+        <option value="1" selected>Наложенный платёж</option>
+      </select>
+    </div>
+    <div class="user">
+      <p class="user-info">Добавить комментарий</p>
+      <textarea class="comments" name="comments" id="" cols="30" rows="10"></textarea>
+    </div>
+    <div class="accept">
+      <div class="accept-window" data-action = "openModal">
+        <label>
+            <input type="checkbox" /><a href="">
+            Оформляя заказ, Вы даете согласие на обработку Ваших персональных данных, а также ознакомлены и принимаете наши правила оплаты, доставки и возврата товара
+          </a>
+        </label>
+      </div>
+      <!-- Modal Window -->
+      <div class="modal-bg" data-action="closeModalOut">
+        <div class="modal">
+          <div class="modal-header">
+            <h2 class="user-agreement">Соглашение</h2>
+            <span class="close-button" data-action="closeModalWindow">&times;</span>
+          </div>
+          <div class="modal-body">
+              Согласно закону Украины «О защите персональных данных» без Вашего согласия нельзя использовать Ваши персональные данные.
+              Оформляя заказ, Вы даете согласие на обработку Ваших персональных данных. Эта информация нужна для обработки заказа, его доставки, а также, при необходимости связаться с Вами для уточнения дополнительной информации.
+              Когда Вы подтверждаете, что даете согласие на получение, хранение и обработку внесенных Вами на сайте персональных данных», это означает: «Я понимаю, что предоставляю информацию о себе, поскольку эта информация необходима для обработки заказа, доставки товара, а также подготовки ответа на мой запрос».
+          </div>
+        </div>
+      </div>
+      <!-------->
+    </div>
+    <div class="accept">
+        <label class="checkbox-registration">
+          <input type="checkbox" /><a href="">
+              Зарегистрироваться на сайте
+          </a>
+        </label>
+        <button class="submit-btn" type ="submit">Подтвердить заказ</button>
+      </section>
+      <!--Cart Items-->
+      <section class="checkout-cart">
+        <p class="checkout-cart__info">Товары в заказе</p>
+        <ul class="shoes">
+          <li class="count"></li>
+        </ul>
+        <div class="summ">
+          <p class="total">Итого</p>
+          <ul class="total-li">
+            <li>1 рубчик</li>
+          </ul>
+        </div>
+        <div class="cart-btn">
+          <button class="cart-button edit">Редактировать заказ</button>
+          <button class="cart-button delete">Удалить заказ</button>
+        </div>
+      </section>
+    </div>
+  </div>

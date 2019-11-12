@@ -3,6 +3,8 @@ const store = [
     brandName: "Nike",
     image: "../img/store/w1.webp",
     category: "men",
+    categories: [{title: 'Men', titleValue: 'men', value: true}, {title: 'Women', titleValue: 'women', value: false}, {title: 'Kids', title: 'kids', value: false}],
+    image: "",
 
     name: "Nike RYZ 365",
     image: '../img/popularArrivals/cross1.jpg',
@@ -17,13 +19,15 @@ const store = [
     _id: "5dc3ccbd92a65308"
   },
   {
-    brandName: "Nike",  
+    brandName: "Nike",
     image: "../img/store/w2.webp",
     category: "men",
+// <<<<<<< HEAD
+    categories: [{title: 'Men', titleValue: 'men', value: true}, {title: 'Women', titleValue: 'women', value: false}, {title: 'Kids', title: 'kids', value: false}],
+    image: "",
 
-    name: "Nike Air Force 1 Shadow",
+// >>>>>>> dev
     popular: false,
-    price: 95,
     size: 38,
     color: "black",
     _id: "5dc3ccbd92a65309"
@@ -32,6 +36,8 @@ const store = [
     brandName: "Nike",
     image: "../img/store/w3.webp",
     category: "men",
+    categories: [{title: 'Men', titleValue: 'men', value: true}, {title: 'Women', titleValue: 'women', value: false}, {title: 'Kids', title: 'kids', value: false}],
+    image: "",
 
     name: "Nike Air Force 1 Low",
     popular: true,
@@ -44,6 +50,8 @@ const store = [
     brandName: "Nike",
     image: "../img/store/w4.webp",
     category: "men",
+    categories: [{title: 'Men', titleValue: 'men', value: true}, {title: 'Women', titleValue: 'women', value: false}, {title: 'Kids', title: 'kids', value: false}],
+    image: "",
 
     name: "Nike Air Max Plus",
     popular: true,
@@ -56,6 +64,8 @@ const store = [
     brandName: "Nike",
     image: "../img/store/w5.webp",
     category: "men",
+    categories: [{title: 'men', value: true}, {title: 'Women', titleValue: 'women', value: false}, {title: 'Kids', title: 'kids', value: false}],
+    image: "",
 
     name: "Nike Low 55",
     popular: false,
@@ -68,6 +78,8 @@ const store = [
     brandName: "Nike",
     image: "../img/store/w6.webp",
     category: "men",
+    categories: [{title: 'men', value: true}, {title: 'Women', titleValue: 'women', value: false}, {title: 'Kids', title: 'kids', value: false}],
+    image: "",
 
     name: "Nike Air Mix ",
     popular: false,
@@ -80,6 +92,8 @@ const store = [
     brandName: "Nike",
     image: "../img/store/w7.webp",
     category: "men",
+    categories: [{title: 'men', value: true}, {title: 'Women', titleValue: 'women', value: false}, {title: 'Kids', title: 'kids', value: false}],
+    image: "",
 
     name: "Nike Air Max 65",
     popular: true,
@@ -92,6 +106,8 @@ const store = [
     brandName: "Nike",
     image: "../img/store/w8.webp",
     category: "men",
+    categories: [{title: 'men', value: true}, {title: 'Women', titleValue: 'women', value: false}, {title: 'Kids', title: 'kids', value: false}],
+    image: "",
 
     name: "Nike React Element 55",
     popular: false,
@@ -104,6 +120,8 @@ const store = [
     brandName: "Nike",
     image: "../img/store/w1.webp",
     category: "women",
+    categories: [{title: 'men', value: false}, {title: 'Women', titleValue: 'women', value: true}, {title: 'Kids', title: 'kids', value: false}],
+    image: "",
 
     name: "Nike RYZ 365",
     quantity: 1,
@@ -155,7 +173,6 @@ const store = [
     brandName: "Nike",
     image: "../img/store/w2.webp",
     category: "women",
-
     name: "Nike Air Force 1 Shadow",
     popular: false,
     price: 95,
@@ -167,6 +184,8 @@ const store = [
     brandName: "Nike",
     image: "../img/store/w3.webp",
     category: "women",
+    categories: [{title: 'men', value: false}, {title: 'Women', titleValue: 'women', value: true}, {title: 'Kids', title: 'kids', value: false}],
+    image: "",
 
     name: "Nike Air Force 1 Low",
     popular: true,
@@ -179,6 +198,8 @@ const store = [
     brandName: "Nike",
     image: "../img/store/w4.webp",
     category: "women",
+    categories: [{title: 'men', value: false}, {title: 'Women', titleValue: 'women', value: true}, {title: 'Kids', title: 'kids', value: false}],
+    image: "",
 
     name: "Nike Air Max Plus",
     popular: true,
@@ -194,8 +215,10 @@ const store = [
 
     name: "Nike Low 55",
     popular: false,
-    price: 115,
     size: 37,
+    color: 'grin',
+    _id: "5dc3ccbd52a603075",
+// =======
     color: "grin",
     _id: "5dc3ccbd52a60307"
   },
@@ -203,6 +226,8 @@ const store = [
     brandName: "Nike",
     image: "../img/store/w6.webp",
     category: "women",
+    categories: [{title: 'men', value: false}, {title: 'Women', titleValue: 'women', value: true}, {title: 'Kids', title: 'kids', value: false}],
+    image: "",
 
     name: "Nike Air Mix ",
     popular: false,
@@ -215,6 +240,8 @@ const store = [
     brandName: "Nike",
     image: "../img/store/w7.webp",
     category: "women",
+    categories: [{title: 'men', value: false}, {title: 'Women', titleValue: 'women', value: true}, {title: 'Kids', title: 'kids', value: false}],
+    image: "",
 
     name: "Nike Air Max 65",
     popular: true,
@@ -227,7 +254,6 @@ const store = [
     brandName: "Nike",
     image: "../img/store/w8.webp",
     category: "women",
-
     name: "Nike React Element 55",
     popular: false,
     price: 115,
@@ -239,7 +265,6 @@ const store = [
     brandName: "Nike",
     image: "../img/store/w1.webp",
     category: "kids",
-
     name: "Nike RYZ 365",
     quantity: 1,
     type: "Кросoвки",
@@ -318,18 +343,17 @@ const store = [
     brandName: "Nike",
     image: "../img/store/w2.webp",
     category: "kids",
-
     name: "Nike Air Force 1 Shadow",
     popular: false,
     price: 95,
     size: 38,
     color: "black",
-    _id: "5dc3ccbd92a65309"
-  },
-  {
-    brandName: "Nike",
+    _id: "5dc3ccbd92a65309",
     image: "../img/store/w3.webp",
     category: "kids",
+    categories: [{title: 'Men', titleValue: 'men', value: false}, {title: 'Women', titleValue: 'women', value: false}, {title: 'Kids', title: 'kids', value: true}],
+    image: "",
+// =======
 
     name: "Nike Air Force 1 Low",
     popular: true,
@@ -343,10 +367,10 @@ const store = [
     image: "../img/store/w4.webp",
     category: "kids",
 
-    name: "Nike Air Max Plus",
-    popular: true,
-    price: 135,
     size: 35,
+    color: 'gray',
+    _id: "5dc3ccbd92a6531744",
+// =======
     color: "gray",
     _id: "5dc3ccbd92a65317"
   },
@@ -354,7 +378,6 @@ const store = [
     brandName: "Nike",
     image: "../img/store/w5.webp",
     category: "kids",
-
     name: "Nike Low 55",
     popular: false,
     price: 115,
@@ -366,7 +389,6 @@ const store = [
     brandName: "Nike",
     image: "../img/store/w6.webp",
     category: "kids",
-
     name: "Nike Air Mix ",
     popular: false,
     price: 105,
@@ -378,7 +400,6 @@ const store = [
     brandName: "Nike",
     image: "../img/store/w7.webp",
     category: "kids",
-
     name: "Nike Air Max 65",
     popular: true,
     price: 75,
@@ -390,7 +411,6 @@ const store = [
     brandName: "Nike",
     image: "../img/store/w8.webp",
     category: "kids",
-
     name: "Nike React Element 55",
     popular: false,
     price: 115,

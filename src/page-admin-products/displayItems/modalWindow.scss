@@ -11,8 +11,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  
-  
+
+
   background-color: rgba(37, 45, 58, 0.7);
   margin: 0 auto;
 }
@@ -23,17 +23,18 @@
 
 .modal-content {
   position: absolute;
-  // top: 50%;
-  // left: 50%;
-  // transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  // min-width: 650px;
-  // min-height: 380px;
-  // padding: 50px 80px;
-  // background-color: #ffffff;
+  min-width: 650px;
+  min-height: 480px;
+
+  padding: 50px 80px;
+  background-color: #ffffff;
   box-shadow: 0 4px 4px rgba(1, 2, 2, 0.2);
   border-radius: 2px;
 }
@@ -139,4 +140,10 @@
   line-height: 42px;
   cursor: pointer;
   font-family: inherit;
+}
+
+
+
+.AddNewItem{
+  height: 500px;
 }

@@ -11,6 +11,7 @@ import './displayItems/displayItems';
 
 
 
+
 const addItemForm = document.querySelector('.AddNewItem');
 const loginFrom = document.querySelector('.login');
 const select = document.querySelector('.select');
@@ -67,7 +68,7 @@ function onAuthSuccess(token) {
 
 addItemForm.addEventListener('submit', takeData)
 
-function takeData(e){
+export function takeData(e){
   e.preventDefault();
   const { image, price, description, fullDescription, name ,brandName ,size ,color } = e.target.elements;
   console.log('select.options[select.selectedIndex].value,', select.options[select.selectedIndex].value,)
