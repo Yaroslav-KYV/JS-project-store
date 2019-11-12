@@ -186,7 +186,6 @@ class RangeSlider {
       };
     })();
 
-
     [
       { thumb: thumb1, input: input1 },
       { thumb: thumb2, input: input2 }
@@ -244,7 +243,6 @@ const rangeSlider = new RangeSlider({
   onChange: _.debounce(((data)=> {
     console.log('data', data)
     store.categoriesFilter.range = data;
-  }), 30) // Illustration of subscription
+  }), 300) // Illustration of subscription
 }).appendToNode(app).addClass('slider');
-
 
