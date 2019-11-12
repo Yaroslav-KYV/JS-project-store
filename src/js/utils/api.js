@@ -1,12 +1,21 @@
-import shopData from '../shoes.js'
+import shopData from '../shoes.js';
+
+const server = 'http://myshop.com.ua'
+const serverURL =
+      window.location.hostname.indexOf('localhost') !== -1
+        ? 'http://localhost:3000'
+        : server;
 export const getShopData = () => {
-
-  return Promise.resolve(shopData)
-
+  return fetch('http://localhost:3000/api/products').then(res => res.json()).then(resData => resData.products.map(el => {
+    el.image = serverURL + el.image;
+    el.quantity = 1;
+    return el
+  })
+  )
 }
 
 
-export const signUp = (userData) => {
+export const signIn = (userData) => {
   return fetch('http://localhost:3000/api/auth/signin', {
     method: 'POST',
     headers: {

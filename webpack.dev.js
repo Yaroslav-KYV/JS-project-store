@@ -12,7 +12,8 @@ module.exports = {
     index: './src/page-index/main.js',
     about: './src/page-about/main.js',
     categories: './src/page-categories/main.js',
-    adminProducts: './src/page-admin-products/main.js'
+    adminProducts: './src/page-admin-products/main.js',
+    order: './src/page-order/main.js'
   },
 
   // https://webpack.js.org/configuration/dev-server/
@@ -120,6 +121,11 @@ module.exports = {
       template: "./src/page-admin-products/tmpl.html",
       chunks: ["adminProducts"],
       filename: "admin-products.html"
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/page-order/tmpl.html",
+      chunks: ["order"],
+      filename: "order.html"
     }),
     new WebpackBar()
   ]

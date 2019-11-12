@@ -2,7 +2,7 @@
 
   <section class="categories-promo">
 
-
+    <!-- видео -->
     <div class="video-box">
       <video loop autoplay>
         <source src="../videos/videoplayback.mp4" type="video/mp4">
@@ -12,6 +12,7 @@
       </div>
     </div>
 
+    <!-- слайдер -->
     <div class="autoplay">
       <div><img class="autoplay__img" src="../img/categories/adidas.webp" alt="Adidas"></div>
       <div><img class="autoplay__img" src="../img/categories/Asics.webp" alt="Asics"></div>
@@ -25,6 +26,7 @@
     </div>
   </section>
 
+  <!-- меню -->
   <section class="categories-shoes">
     <ul class="categories-menu">
       <li class="categories-menu__item"><button class="categories-menu__button">All</button></li>
@@ -32,9 +34,109 @@
       <li class="categories-menu__item"><button class="categories-menu__button">Women</button></li>
       <li class="categories-menu__item"><button class="categories-menu__button">Kids</button></li>
     </ul>
+
+        <!-- поиск -->
+    <div class="search">
+      <form id="search-form" class="search-form">
+        <div class="block-div">
+          <div class="form-group">
+          <input name="input" class="form-control" type="text" placeholder="Search" />
+        </div>
+
+          <button type="submit" class="btn" >Search</button>
+        </div>
+
+        <div class="block-div">
+                <div class="form-group">
+                    <label for="make">
+                      Select Brand:
+                    </label>
+                    <select name="brandName" id="make" data-filter="make" class="filter-make filter form-control">
+                      <option value="all">All</option>
+                      <option value="Nike">Nike</option>
+                      <option value="Adidas">Adidas</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="model">
+                      Select Color:
+                    </label>
+                    <select name ="color" data-filter="model" class="filter-model filter form-control">
+                      <option value="all">All</option>
+                      <option value="White">White</option>
+                      <option value="Pink">Pink</option>
+                      <option value="Blue">Blue</option>
+                      <option value="Red">Red</option>
+                      <option value="Gray">Gray</option>
+                      <option value="Black">Black</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="model">
+                        Select Size:
+                    </label>
+                    <select name="size" data-filter="type" class="filter-type filter form-control">
+                      <option value="all">  All</option>
+                      <option value="36">36</option>
+                      <option value="37">37</option>
+                      <option value="38">38</option>
+                      <option value="39">39</option>
+                      <option value="40">40</option>
+                      <option value="41">41</option>
+                      <option value="42">42</option>
+                      <option value="43">43</option>
+                      <option value="44">44</option>
+                      <option value="45">45</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                      <div id="range-slider"></div>
+                  </div>
+        </div>
+      </form>
+    </div>
+
     <div class="categories-array"></div>
   </section>
 
+  <!-- модальное окно подписки-->
+  <!-- <section class="signup-modal__wrapper">
+    <div class="signup-modal">
+      <a href="#" class="footer-nav__logo">
+        <img src="../img/shopping-cart.svg" alt="">Sho<span class="logo-letter">e</span>Shop
+      </a>
+      <h2 class="signup-modal__h2">GET NEWS AND OFFERS FROM <br> SHOE SHOP</h2>
+      <p class="signup-modal__p">Sign up for emails and get special news and offers from the Shoe Shop family of brands,
+        including Jordan and Hurley.</p>
+      <form class="signup-modal_form" action="">
+        <label>
+          <p>Email address*</p>
+          <input class="signup-modal_email" type="text" name="" id="">
+        </label>
+
+        <dev class="">
+          <label>
+            <p>Date of Birth*</p>
+            <input class="signup-modal_date" type="date" name="" id="">
+          </label>
+
+          <label>
+            <p>Shopping preference*</p>
+            <select class="signup-modal_preference" name="" id="">
+              <option value="all">All</option>
+              <option class="signup-modal_preference" value="men">Men</option>
+              <option class="signup-modal_preference" value="women">Women</option>
+              <option class="signup-modal_preference" value="kids">Kids</option>
+            </select>
+          </label>
+        </dev>
+        
+        <button class="signup-modal__btn">SIGN UP</button>
+      </form>
+      <p class="signup-modal__police">By signing up, you agree to Nike's Privacy Policy and Terms of Use.</p>
+      <button class="signup-modal__close">x</button>
+    </div>
+  </section> -->
   <!-- модальное окно -->
   <section class="footer-modal__wrapper">
       <div class="footer-modal">
@@ -44,10 +146,4 @@
       </div>
     </section>
 
-
-
-  </div>
-
-
-
-
+</div>

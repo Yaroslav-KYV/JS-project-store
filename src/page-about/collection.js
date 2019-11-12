@@ -1,5 +1,6 @@
 import collection from './collection.hbs';
-import store from '../js/shoes';
+import store from '../js/shoes.js';
+console.log(store)
 
 // рендерю коллекцию на страничку модалки
 const containerCollection = document.querySelector('.collection-shoes');
