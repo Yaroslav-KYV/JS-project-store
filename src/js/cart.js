@@ -66,9 +66,13 @@ const repaintCartContainer = () => {
             </svg>
         </li>`;
     }, '');
+
+  if(cartItems) {
     cartItems.innerHTML = stringPutToDom;
     document.querySelector('.cart__totalprice').textContent = totPrice;
     cartItemsNotifier();
+
+  }
 };
 
 /* exporting function to use it in addCart.js */
@@ -140,7 +144,6 @@ const removeItem = (event) => {
 
 };
 
-updateCartContainer();
 
 /* Listener for Cart Tag */
 cartTag.addEventListener('click', cartOpenClose);
