@@ -28,10 +28,14 @@ window.addEventListener("keydown", e => {
 // Order
 const editBtn = document.querySelector('.edit');
 const deleteBtn = document.querySelector('.delete');
-const order = localStorage.getItem('carts');
+
 let totalOrder = [];
+
 
 const inLocalStorage = () => {
 
 }
+localStorage.setItem('myKey', 'myValue');
+var localValue = localStorage.getItem('myKey');
+console.log(localValue);
 
