@@ -36,13 +36,25 @@ export const newItemFetch = (formData, token) => {
 
 }
 
+
+export const updateItem = (data, token,editElemenId) => {
+return fetch(`http://localhost:3000/api/products/${editElemenId}`, {
+    method: 'PUT',
+    headers: {
+        'Authorization': `Bearer ${token}`,
+        'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data)
+  }).then(res => res.json());
+
+}
+
 export const deleteItem = (id, token) => {
-//   fetch(`http://localhost:3000/api/products/${id}`, {
-//     method: 'DELETE',
-//     headers: {
-//         'content-type': 'application/json',
-//         'Authorization': `Bearer ${token}`,
-//     },
-// }).then(res => res.json())
-  return Promise.resolve({message: `success! id: ${id} is deleted`});
+  return fetch(`http://localhost:3000/api/products/${id}`, {
+    method: 'DELETE',
+    headers: {
+        'Authorization': `Bearer ${token}`,
+    },
+}).then(res => res.json())
+
 }

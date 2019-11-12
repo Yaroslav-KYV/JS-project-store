@@ -31,13 +31,14 @@
   align-items: center;
   justify-content: center;
   min-width: 650px;
-  min-height: 480px;
-
+  min-height: 580px;
   padding: 50px 80px;
   background-color: #ffffff;
   box-shadow: 0 4px 4px rgba(1, 2, 2, 0.2);
   border-radius: 2px;
+
 }
+
 
 .close-btn {
   position: absolute;
@@ -113,10 +114,10 @@
   width: 115px;
   height: 42px;
   background-color: #2a2a2a;
-  border-radius: 3px;
-  box-shadow: 0 4px 10px rgba(1, 2, 2, 0.2);
+  // border-radius: 3px;
+  // box-shadow: 0 4px 10px rgba(1, 2, 2, 0.2);
   color: #ffffff;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 600;
   line-height: 74px;
   text-transform: uppercase;
@@ -145,5 +146,8 @@
 
 
 .AddNewItem{
-  height: 500px;
+  height: 600px;
+}
+.checkbox {
+  width: 20px;
 }

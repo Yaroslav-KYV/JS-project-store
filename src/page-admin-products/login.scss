@@ -87,8 +87,8 @@
 .AddNewItem input {
   text-align: center;
   width: 800px;
-  height: 50px;
-  margin-bottom: 20px;
+  height: 30px;
+  margin-bottom: 5px;
 }
 .AddNewItem button {
   width: 300px;
@@ -107,6 +107,7 @@
 }
 
 .AddNewItem select{
+  font-size: 20px;
   text-align: center;
   width: 800px;
   height: 50px;
