@@ -1,14 +1,21 @@
 import collection from './collection.hbs';
-import store from '../js/shoes.js';
-console.log(store)
+import store from '../js/store';
+import {getShopData} from '../js/utils/api';
 
-// рендерю коллекцию на страничку модалки
-const containerCollection = document.querySelector('.collection-shoes');
+getShopData().then(resData => {
+    store.shopData = resData;
+    console.log('resData', resData)
+    console.log('store', store)
+    // рендерю коллекцию на страничку модалки
+    const containerCollection = document.querySelector('.collection-shoes');
+    
+    if (containerCollection) {   
+        const markup = store.shopData.map(item => collection(item)).join('');
+        containerCollection.insertAdjacentHTML('beforeend', markup);
+    };
+    
+})
 
-if (containerCollection) {   
-    const markup = store.map(item => collection(item)).join('');
-    containerCollection.insertAdjacentHTML('beforeend', markup);
-};
 
 const openCollectionBtn = document.querySelector('.open-new-collection');
 const closeModalArea = document.querySelector('.js-backdrop-collection');
