@@ -22,11 +22,11 @@ const store = [
     brandName: "Nike",
     image: "../img/store/w2.webp",
     category: "men",
-<<<<<<< HEAD
+// <<<<<<< HEAD
     categories: [{title: 'Men', titleValue: 'men', value: true}, {title: 'Women', titleValue: 'women', value: false}, {title: 'Kids', title: 'kids', value: false}],
     image: "",
 
->>>>>>> dev
+// >>>>>>> dev
     popular: false,
     size: 38,
     color: "black",
@@ -166,24 +166,13 @@ const store = [
     popular: false,
     price: 22,
     size: 36,
-<<<<<<< HEAD
-    color: 'black',
-    _id: "5dc3ccbd92a653081",
-=======
     color: "black",
     _id: "5dc3ccbd92a65308"
->>>>>>> dev
   },
   {
     brandName: "Nike",
     image: "../img/store/w2.webp",
     category: "women",
-<<<<<<< HEAD
-    categories: [{title: 'men', value: false}, {title: 'Women', titleValue: 'women', value: true}, {title: 'Kids', title: 'kids', value: false}],
-    image: "",
-=======
-
->>>>>>> dev
     name: "Nike Air Force 1 Shadow",
     popular: false,
     price: 95,
@@ -359,12 +348,12 @@ const store = [
     price: 95,
     size: 38,
     color: "black",
-    _id: "5dc3ccbd92a65309"
+    _id: "5dc3ccbd92a65309",
     image: "../img/store/w3.webp",
     category: "kids",
     categories: [{title: 'Men', titleValue: 'men', value: false}, {title: 'Women', titleValue: 'women', value: false}, {title: 'Kids', title: 'kids', value: true}],
     image: "",
-=======
+// =======
 
     name: "Nike Air Force 1 Low",
     popular: true,
@@ -381,7 +370,7 @@ const store = [
     size: 35,
     color: 'gray',
     _id: "5dc3ccbd92a6531744",
-=======
+// =======
     color: "gray",
     _id: "5dc3ccbd92a65317"
   },
