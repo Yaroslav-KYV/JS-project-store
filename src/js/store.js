@@ -5,4 +5,5 @@ export default {
   admin: {
     auth: false,
   }
+  
 }
