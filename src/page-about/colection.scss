@@ -1,0 +1,109 @@
+body {
+  margin: 0;
+}
+
+body.show-collection .backdrop-collection {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: initial;
+}
+body.show-modalwindow .collection-shoes {
+  transform: scale(1);
+}
+
+.backdrop-collection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 200ms, visibility 200ms;
+}
+.collection-shoes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 1170px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: regular 25px;
+  min-height: 635px;
+  margin: 0 auto;
+  padding: 0;
+  background-color: white;
+  transform: scale(1.1);
+  transition: transform 0.5s;
+  overflow: scroll;
+  max-height: 800px;
+}
+.collection_brend {
+  font-size: 25px;
+  font-weight: 600;
+}
+.collection-text {
+  position: relative;
+  padding: 6px;
+}
+.collection_prise {
+  position: absolute;
+  font-size: 25px;
+  font-weight: 600;
+  right: 6px;
+  top: 4px;
+  width: 40px;
+  text-align: center;
+}
+.collection-container {
+  position: relative;
+  margin-bottom: 30px;
+}
+.collection-card_background {
+position: absolute;
+background-color:  rgba(56, 240, 240, 0.5);
+width: 90%;
+height: 346px;
+top: 14px;
+left: 16px;
+opacity: 0;
+}
+.collection-card_background:hover {
+  // transform: scale(1.1);
+  // transition: transform 0.5s;
+opacity: 1;
+}
+
+.collection-add_btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%, -50%);
+  display: block;
+ font-size: 30px;
+ font-style: bold;
+ width: 169px;
+ height: 59px;
+ border: 2px solid white;
+ background-color: rgba(255, 255, 255, 0);
+ color: white;
+ cursor: pointer;
+}
+.close-collection {
+  position: fixed;
+  top: 30px;
+  right: 46px;
+  font-family: "Poppins", sans-serif;
+  width: 145px;
+  height: 47px;
+  border: none;
+  background-color: #82f4d3;
+  font-size: 15px;
+  font-weight: 500;
+  z-index: 2;
+}
