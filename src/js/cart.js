@@ -145,15 +145,8 @@ const removeItem = (event) => {
 };
 
 
-if(cartItems) {
+/* Listener for Cart Tag */
+cartTag.addEventListener('click', cartOpenClose);
 
-  updateCartContainer();
-
-  /* Listener for Cart Tag */
-  cartTag.addEventListener('click', cartOpenClose);
-
-  /* Listener for Remove item ico */
-  cartItems.addEventListener('click', removeItem)
-}
-
-
+/* Listener for Remove item ico */
+cartItems.addEventListener('click', removeItem)

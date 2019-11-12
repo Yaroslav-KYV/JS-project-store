@@ -65,8 +65,9 @@ display: block;
 text-decoration: none;
 font-family: 'Ubuntu';
 font-weight: 700;
-color: #ffffff;
+color: #fcae26;
 text-align: center;
+
 }
 
 .nav__items {
@@ -75,12 +76,12 @@ text-transform: uppercase;
 display: flex;
 justify-content: space-evenly;
 list-style: none;
-font-size: 40px;
+font-size: 30px;
 height: 100%;
-top:50%;
+top:12%;
 }
 .nav__items a:hover{
-color:#2fcce7;
+color:#bd7800;
 transition: ease-in-out .4s;
 }
 
@@ -165,7 +166,8 @@ transform: rotate(45deg);
 .nav:before {
 display: block;
 position: fixed;
-top: 0px;
+bottom: 600px;
+border-radius: 45%;
 right: calc((100vw - 1170px)/-4);
 content: '';
 width: 10px;
