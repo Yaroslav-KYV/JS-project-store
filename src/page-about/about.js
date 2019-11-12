@@ -1,8 +1,9 @@
+
+
 const refs = {
   openModal: document.querySelector(".open-window"),
   closeModal: document.querySelector(".close-window"),
   backdrop: document.querySelector(".js-backdrop-modalwindow"),
-  sectionContainer: document.querySelector("#sec2")
 };
 
 refs.openModal.addEventListener("click", openModal);
@@ -31,4 +32,14 @@ function closeModalESC(e) {
     return;
   }
   closeModal();
+}
+
+
+// открыть новую коллекцию
+const openNewCollection = document.querySelector('.open-new-collection');
+
+openNewCollection.addEventListener('click', shoeNewCollection);
+
+function shoeNewCollection() {
+
 }

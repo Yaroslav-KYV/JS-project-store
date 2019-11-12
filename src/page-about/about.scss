@@ -59,7 +59,9 @@
 .about-section-two {
   display: flex;
   flex-direction: column;
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  // box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  box-shadow: inset 2px 2px 5px rgba(154, 147, 140, 0.5),
+  1px 1px 5px rgba(255, 255, 255, 1);
 }
 .about-section-two__wrapper {
   width: 600px;
@@ -87,7 +89,9 @@
   flex-direction: column;
   align-items: flex-end;
   margin-bottom: 60px;
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  // box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  box-shadow: inset 2px 2px 5px rgba(154, 147, 140, 0.5),
+  1px 1px 5px rgba(255, 255, 255, 1);
 }
 .about-section-three__wrapper {
   position: absolute;
@@ -97,13 +101,25 @@
   color: rgb(51, 51, 99);
   padding-left: 30px;
 }
+.open-new-collection {
+  font-family: "Poppins", sans-serif;
+  width: 145px;
+  height: 47px;
+  border: none;
+  background-color: #82f4d3;
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 60px;
+}
 
 /*  секция 4*/
 .about-section-four {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  // box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  box-shadow: inset 2px 2px 5px rgba(154, 147, 140, 0.5),
+  1px 1px 5px rgba(255, 255, 255, 1);
   margin-bottom: 60px;
 }
 
@@ -117,9 +133,9 @@
 
 /* 5 */
 .about-section-five {
-  // box-shadow: inset 2px 2px 5px rgba(154, 147, 140, 0.5),
-  // 1px 1px 5px rgba(255, 255, 255, 1);
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  box-shadow: inset 2px 2px 5px rgba(154, 147, 140, 0.5),
+  1px 1px 5px rgba(255, 255, 255, 1);
+  // box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   margin-bottom: 60px;
   margin-bottom: 100px;
 }
@@ -149,7 +165,7 @@ body.show-modalwindow .about-section-two__wrapperModal {
   top: 0;
   left: 0;
   width: 100vw;
-  // height: 100vh;
+  height: 100vh;
   background-color: rgba(0, 0, 0, 0.3);
   z-index: 10;
   pointer-events: none;
@@ -168,21 +184,23 @@ body.show-modalwindow .about-section-two__wrapperModal {
 
   transform: scale(1.1);
   transition: transform 0.5s;
+  overflow:hidden;
+  // height: 100%;
 }
 
 .close-window {
   font-family: "Poppins", sans-serif;
-  text-transform: uppercase;
   width: 145px;
   height: 47px;
   border: none;
   background-color: #82f4d3;
   font-size: 15px;
-  font-weight: 600;
+  font-weight: 500;
 }
 .modal-text {
   width: 600px;
   padding: 30px;
+  // overflow:auto;
 }
 .about-shoes {
   padding: 15px 6px;
