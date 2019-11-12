@@ -1,7 +1,7 @@
 import $ from "jquery";
 import "slick-carousel";
 import "slick-carousel/slick/slick.scss";
-import mousewheel from "jquery-mousewheel"
+import mousewheel from "jquery-mousewheel";
 
 var $slider = $(".slideshow .slider"),
   maxItems = $(".item", $slider).length,
@@ -90,7 +90,7 @@ $(".slideshow-right .slider").slick({
   infinite: true,
   speed: 950,
   cssEase: "cubic-bezier(0.7, 0, 0.3, 1)",
-  initialSlide: maxItems - 1
+  initialSlide: maxItems - 1,
 });
 $(".slideshow-text").slick({
   swipe: false,
@@ -98,5 +98,10 @@ $(".slideshow-text").slick({
   arrows: false,
   infinite: true,
   speed: 900,
-  cssEase: "cubic-bezier(0.7, 0, 0.3, 1)"
+  cssEase: "cubic-bezier(0.7, 0, 0.3, 1)",
 });
+
+setTimeout(
+  function () {
+      window.scrollTo({top: 850, left: 0, behavior: 'smooth'})
+}, 15000);
