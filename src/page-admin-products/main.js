@@ -1,12 +1,13 @@
 import '../scss/main.scss';
 import './page.scss';
 import './login.scss';
-import { signUp } from '../js/utils/api';
+import { signIn } from '../js/utils/api';
 import { newItemFetch } from '../js/utils/api';
-import { shopData } from '../js/utils/api';
+import { renderAll } from '../js/utils/helpers';
 import store from '../js/store';
 import '../js/visa';
 import './displayItems/displayItems';
+
 
 
 
@@ -18,6 +19,15 @@ const loginButton = document.querySelector('.loginButton');
 const loginContainer = document.querySelector('.adminContainer');
 
 const addItemWrapper = document.querySelector('.addItemContainer');
+const myGoods = document.querySelector('.my-goods');
+
+let token = localStorage.getItem('admin');
+
+if(token) {
+  onAuthSuccess(token);
+}
+
+
 
 
 
@@ -34,35 +44,53 @@ loginFrom.addEventListener('submit',e => {
   Object.keys(loginCheck).forEach(key => {
       formDataSign.append(key, loginCheck[key]);
   })
-  signUp(loginCheck).then(resData => {
+  signIn(loginCheck).then(resData => {
     console.log('resData', resData);
     if(resData.success && resData.token) {
-      store.admin = {
-        token: resData.token,
-        auth: true,
-      }
-      addItemWrapper.style.display = "block";
-      loginContainer.style.display = "none";
+      localStorage.setItem('admin', resData.token);
+      onAuthSuccess(token);
     }
   })
+  
 })
 
+function onAuthSuccess(token) {
+    store.admin = {
+      token: token,
+      auth: true,
+    }
+    addItemWrapper.style.display = "block";
+    myGoods.style.display = "block";
+    loginContainer.style.display = "none";
 
-const newItem = [];
+  }
+
 
 addItemForm.addEventListener('submit', takeData)
 
-function takeData(e){
+export function takeData(e){
   e.preventDefault();
-  const { image, price, description, fullDescription, name , category} = e.target.elements;
+  const { image, price, description, fullDescription, name ,brandName ,size ,color } = e.target.elements;
+  console.log('select.options[select.selectedIndex].value,', select.options[select.selectedIndex].value,)
+  const category = select.options[select.selectedIndex].value;
   const obj = {
     image: image.files[0],
     price: price.value,
     description: description.value,
     fullDescription: fullDescription.value,
     name: name.value,
-    category: select.options[select.selectedIndex].value,
+    brandName: brandName.value,
+    size: size.value,
+    color: color.value,
+    category,
+    categories: JSON.stringify([{title: 'Men', titleValue: 'men', value: checkCat('men', category)}, {title: 'Women', titleValue: 'women', value: checkCat('women', category)}, {title: 'Kids', titleValue: 'kids', value: checkCat('kids', category)}]),
  };
+ function checkCat(current, active) {
+   console.log('current :', current);
+   console.log('active :', active);
+   return current === active
+ }
+
   console.log('obj', obj);
 
   const formData  = new FormData();
@@ -74,6 +102,7 @@ function takeData(e){
       console.log('resData', resData);
       store.shopData = resData.products;
       console.log('store :', store);
+      myGoods.innerHTML = renderAll(resData.products);
     })
 
   }

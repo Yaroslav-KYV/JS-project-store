@@ -11,7 +11,10 @@
   left: 0;
   width: 100%;
   height: 100%;
+
+
   background-color: rgba(37, 45, 58, 0.7);
+  margin: 0 auto;
 }
 
 .modal-hidden {
@@ -28,7 +31,8 @@
   align-items: center;
   justify-content: center;
   min-width: 650px;
-  min-height: 380px;
+  min-height: 480px;
+
   padding: 50px 80px;
   background-color: #ffffff;
   box-shadow: 0 4px 4px rgba(1, 2, 2, 0.2);
@@ -83,9 +87,9 @@
   display: inline-block;
   margin-bottom: 15px;
   border: none;
-  width: 360px;
-  height: 42px;
-  padding: 10px;
+  // width: 360px;
+  // height: 42px;
+  // padding: 10px;
   background-color: #e9e9e9;
   font-family: inherit;
   font-size: 14px;
@@ -136,4 +140,10 @@
   line-height: 42px;
   cursor: pointer;
   font-family: inherit;
+}
+
+
+
+.AddNewItem{
+  height: 500px;
 }

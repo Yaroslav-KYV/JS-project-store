@@ -44,7 +44,7 @@
   width: 400px;
   margin: 0 auto;
   background-color: rgb(211, 211, 211);
-  height: 400px;
+  // height: 900px;
   }
 
   .add_item  input{
@@ -52,7 +52,7 @@
     margin: 0 auto;
     display: block;
     width: 300px;
-    height: 40px;
+    height: 25px;
     margin-bottom: 20px;
     text-align: center;
   }
@@ -65,9 +65,12 @@
 
 .addItemContainer {
   width: 1170px;
-  height: 700px;
+  height: 900px;
   background-color: rgb(238, 238, 238);
   margin: 0 auto;
+  display: none;
+}
+.my-goods {
   display: none;
 }
 
@@ -140,3 +143,18 @@
 }
 
 
+.checkbox-label {
+  display: flex;
+  align-items: center;
+
+}
+.checkbox-label p {
+  margin: 0;
+}
+
+input.checkbox {
+  width: initial;
+  display: inline-block;
+  margin-bottom: 0;
+  margin-right: 10px;
+}

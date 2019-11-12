@@ -1,5 +1,6 @@
 import catTempl from './template.hbs';
 import catTemplAdm from './templateAdm.hbs';
+import popularTempl from './popular.hbs';
 
 const filtered = {
   men: {
@@ -17,18 +18,23 @@ const filtered = {
 }
 
 
-export function renderAll(shopData, isAdmin = false) {
+
+
+
+
+export function renderAll(shopData, type = null) {
   filtered.men.items = [];
   filtered.women.items = [];
   filtered.kids.items = [];
 
   shopData.forEach(el => {
-    if(el.category === 'men') {
-      filtered.men.items.push(el);
-    } else if(el.category === 'women') {
-      filtered.women.items.push(el);
+    const product = {...el}
+    if(product.category === 'men') {
+      filtered.men.items.push(product);
+    } else if(product.category === 'women') {
+      filtered.women.items.push(product);
     } else {
-      filtered.kids.items.push(el);
+      filtered.kids.items.push(product);
     }
   })
 
@@ -36,9 +42,12 @@ console.log(filtered);
   let markup = '';
   Object.keys(filtered).forEach(key => {
     if(filtered[key].items.length > 0) {
-      if(isAdmin) {
+      if(type === 'admin') {
         markup += catTemplAdm(filtered[key]);
 
+      }else if (type === 'popular') {
+
+        markup += popularTempl(filtered[key]);
       }else {
 
         markup += catTempl(filtered[key]);

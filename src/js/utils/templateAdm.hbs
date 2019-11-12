@@ -5,7 +5,7 @@
     <div class="item">
 
       <div class="item_imgContainer">
-        <img src=" {{src}} " class="item_img" width="250px">
+        <img src=" {{image}} " class="item_img" width="250px">
       </div>
 <div class="item-text">
       <span class="item_name"> {{brandName}}</span>
@@ -17,8 +17,8 @@
 
 
     <div class="item-buts">
-      <button class="DELETE btn" id="{{_id}}" data-action="delete"><i class="fas fa-times"></i></button>
-      <button class="EDIT btn" id="{{_id}}" data-action="edit"><i class="fas fa-pencil-alt"></i></button>
+      <button class="DELETE btn" data-id="{{_id}}" data-action="delete"><i class="fas fa-times"></i></button>
+      <button class="EDIT btn" data-id="{{_id}}" data-action="edit"><i class="fas fa-pencil-alt"></i></button>
     </div>
  </div>
     {{/each}}
