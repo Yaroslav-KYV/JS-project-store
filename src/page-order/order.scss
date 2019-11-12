@@ -22,6 +22,9 @@
 .comments {
   resize: none;
 }
+.accept-window{
+  padding:10px 0 10px 0;
+}
 .user-info {
   text-transform: uppercase;
   font-size: 14px;
@@ -56,7 +59,8 @@
 .checkout-cart {
   margin-top:35px;
   width: 500px;
-  height: 400px;
+  min-height:400px;
+  height:200px;
   border:2px solid #D8E1DD;
   padding: 20px 20px 20px 20px;
 }
@@ -67,37 +71,50 @@
   font-weight: 900;
   border-bottom-width: 2px;
   border-bottom-style: solid;
-  border-bottom-color:#6D6A62;
+  border-bottom-color:#ababab;
 }
 .summ {
   display: flex;
   justify-content: space-between;
 }
-.total {
-  font-size: 24px;
-  text-transform: uppercase;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 900;
-  border-top-width: 2px;
-  border-top-style: solid;
-  border-top-color:#6D6A62;
+.total-dom {
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 22px;
+  float: right;
+  text-transform: none;
+  color: #313236;
 }
 .total-li, .count {
   list-style: none;
 }
-.cart-btn{
+.order-list {
+  width:100%;
+}
+.order-items {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding:10px 0 10px 0;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color:#ababab;
 }
-.cart-button {
-  width: 210px;
-  height: 50px;;
-  border: none;
-  background: #D5CFBF;
-  text-transform: uppercase;
-  font-family: 'Roboto', sans-serif;
-  font-size: 12px;
-  cursor: pointer;
+.order-stuff {
+  font-size: 18px;
+  font-weight: 900;
+}
+.order-cost {
+  font-size: 22px;
+    font-weight: bold;
+    line-height: 22px;
+    text-transform: none;
+    color: #313236;
+}
+.total-amount {
+  display: flex;
+  justify-content:space-between;
+  padding-top: 10px;
 }
 /* modal */
 .modal-bg{
@@ -145,3 +162,4 @@
   font-weight: 900;
   cursor: pointer;
 }
+

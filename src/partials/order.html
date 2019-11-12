@@ -1,16 +1,16 @@
 <div class="full-checkout">
-  <section class="order-width confirm-offer">
-    <h2 class="checkout">Оформлене заказа</h2>
+  <section class="order-width">
+    <h2 class="checkout">Checkout</h2>
     <div class="user">
-      <p class="user-info">Имя</p>
-      <input type="text" autocomplete="on">
-    </div>
-    <div class="user">
-      <p class="user-info">Фамилия</p>
+      <p class="user-info">Name</p>
       <input type="text">
     </div>
     <div class="user">
-      <p class="user-info">Отчество</p>
+      <p class="user-info">Surname</p>
+      <input type="text">
+    </div>
+    <div class="user">
+      <p class="user-info">Middle name</p>
       <input type="text">
     </div>
     <div class="user">
@@ -18,41 +18,42 @@
       <input type="email" placeholder="example@google.com">
     </div>
     <div class="user">
-      <p class="user-info">Контактный телефон</p>
+      <p class="user-info">Contact number</p>
       <input type="tel" placeholder="+38(__) ___-__-__">
     </div>
     <div class="user">
-      <p class="user-info">Город</p>
+      <p class="user-info">City</p>
       <input type="text" autocomplete="on">
     </div>
     <div class="user">
-      <p class="user-info">Способ доставки</p>
+      <p class="user-info">Delivery method</p>
       <select name="delivery method">
-        <option value="1">Новая почта(наложенный платёж)</option>
-        <option value="2" selected>Доставка Курьером Новой Почты</option>
+        <option value="1">Nova Poshta(cash on delivery)</option>
+        <option value="2" selected>Courier Delivery Nova Poshta</option>
       </select>
-      <p class="attention">В случае обмена / возврата товара (в том числе в ситуации, когда Вам не подошел размер) стоимость обратной
-        доставки ОПЛАЧИВАЕТ ПОКУПАТЕЛЬ.</p>
+      <p class="attention">In the case of an exchange / return of goods (including in a situation where the size did not
+        fit you) the cost of the return SHIPPING BY THE BUYER.</p>
     </div>
     <div class="user">
-      <p class="user-info">Адрес</p>
+      <p class="user-info">Adress</p>
       <input type="text">
     </div>
     <div class="user">
-      <p class="user-info">Способо оплаты</p>
+      <p class="user-info">Payment method</p>
       <select name="payment-method">
-        <option value="1" selected>Наложенный платёж</option>
+        <option value="1" selected>C.O.D</option>
       </select>
     </div>
     <div class="user">
-      <p class="user-info">Добавить комментарий</p>
+      <p class="user-info">Add a comment</p>
       <textarea class="comments" name="comments" id="" cols="30" rows="10"></textarea>
     </div>
     <div class="accept">
-      <div class="accept-window" data-action = "openModal">
+      <div class="accept-window" data-action="openModal">
         <label>
-            <input type="checkbox" /><a href="">
-            Оформляя заказ, Вы даете согласие на обработку Ваших персональных данных, а также ознакомлены и принимаете наши правила оплаты, доставки и возврата товара
+          <input type="checkbox" /><a href="">
+            By placing an order, you consent to the processing of your personal data, as well as read and accept our
+            rules for payment, delivery and return of goods
           </a>
         </label>
       </div>
@@ -60,42 +61,44 @@
       <div class="modal-bg" data-action="closeModalOut">
         <div class="modal">
           <div class="modal-header">
-            <h2 class="user-agreement">Соглашение</h2>
+            <h2 class="user-agreement">Agreement</h2>
             <span class="close-button" data-action="closeModalWindow">&times;</span>
           </div>
           <div class="modal-body">
-              Согласно закону Украины «О защите персональных данных» без Вашего согласия нельзя использовать Ваши персональные данные.
-              Оформляя заказ, Вы даете согласие на обработку Ваших персональных данных. Эта информация нужна для обработки заказа, его доставки, а также, при необходимости связаться с Вами для уточнения дополнительной информации.
-              Когда Вы подтверждаете, что даете согласие на получение, хранение и обработку внесенных Вами на сайте персональных данных», это означает: «Я понимаю, что предоставляю информацию о себе, поскольку эта информация необходима для обработки заказа, доставки товара, а также подготовки ответа на мой запрос».
+            According to the law of Ukraine “On the protection of personal data”, without your consent you cannot use
+            your personal data.
+                          By placing an order, you consent to the processing of your personal data. This information is
+            needed to process the order, its delivery, and, if necessary, contact you to clarify additional information.
+                          When you confirm that you consent to the receipt, storage and processing of the personal data
+            entered by you on the website, "this means:" I understand that I provide information about myself, since
+            this information is necessary for processing the order, delivery of goods, as well as preparing an answer to
+            my request. "
           </div>
         </div>
       </div>
       <!-------->
     </div>
     <div class="accept">
-        <label class="checkbox-registration">
-          <input type="checkbox" /><a href="">
-              Зарегистрироваться на сайте
-          </a>
-        </label>
-        <button class="submit-btn" type ="submit">Подтвердить заказ</button>
-      </section>
-      <!--Cart Items-->
-      <section class="checkout-cart">
-        <p class="checkout-cart__info">Товары в заказе</p>
-        <ul class="shoes">
-          <li class="count"></li>
-        </ul>
-        <div class="summ">
-          <p class="total">Итого</p>
-          <ul class="total-li">
-            <li>1 рубчик</li>
-          </ul>
-        </div>
-        <div class="cart-btn">
-          <button class="cart-button edit">Редактировать заказ</button>
-          <button class="cart-button delete">Удалить заказ</button>
-        </div>
-      </section>
+      <label class="checkbox-registration">
+        <input type="checkbox" /><a href="">Register on the site</a>
+      </label>
     </div>
-  </div>
+    <button class="submit-btn" type="submit">Confirm the order</button>
+  </section>
+  <!--Cart Items-->
+  <section class="checkout-cart">
+    <p class="checkout-cart__info">Products in order</p>
+    <ul class="shoes">
+      <li class="count"></li>
+    </ul>
+    <div class="summ">
+      <ul class="order-list">
+        <li class="order-items"></li>
+      </ul>
+    </div>
+    <div class="total-amount">
+      <p class="total-dom">Total:</p>
+    </div>
+  </section>
+</div>
+</div>
