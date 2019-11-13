@@ -17,7 +17,7 @@ const store = [
     _id: "5dc3ccbd92a65308"
   },
   {
-    brandName: "Nike",  
+    brandName: "Nike",
     image: "../img/store/w2.webp",
     category: "men",
 
