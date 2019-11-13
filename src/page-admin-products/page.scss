@@ -67,3 +67,13 @@
   display: flex;
   justify-content: space-between;
 }
+
+
+  // .AddNewItem.update-form input,
+  // .AddNewItem.update-form textarea {
+  //   width: 100%;
+  // }
+
+  .AddNewItem.update-form input[name="images"] {
+    width: 200px;
+  }

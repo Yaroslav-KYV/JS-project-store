@@ -2,7 +2,7 @@ import '../scss/main.scss';
 import './page.scss';
 import './login.scss';
 import { signIn } from '../js/utils/api';
-import { newItemFetch } from '../js/utils/api';
+import { newItemFetch, updateItem } from '../js/utils/api';
 import { renderAll } from '../js/utils/helpers';
 import store from '../js/store';
 import '../js/visa';
@@ -51,7 +51,7 @@ loginFrom.addEventListener('submit',e => {
       onAuthSuccess(token);
     }
   })
-  
+
 })
 
 function onAuthSuccess(token) {
@@ -68,13 +68,12 @@ function onAuthSuccess(token) {
 
 addItemForm.addEventListener('submit', takeData)
 
-export function takeData(e){
+export function takeData(e, type, editElemenId){
   e.preventDefault();
   const { image, price, description, fullDescription, name ,brandName ,size ,color } = e.target.elements;
   console.log('select.options[select.selectedIndex].value,', select.options[select.selectedIndex].value,)
   const category = select.options[select.selectedIndex].value;
   const obj = {
-    image: image.files[0],
     price: price.value,
     description: description.value,
     fullDescription: fullDescription.value,
@@ -85,6 +84,11 @@ export function takeData(e){
     category,
     categories: JSON.stringify([{title: 'Men', titleValue: 'men', value: checkCat('men', category)}, {title: 'Women', titleValue: 'women', value: checkCat('women', category)}, {title: 'Kids', titleValue: 'kids', value: checkCat('kids', category)}]),
  };
+
+ if(image && image.files[0]) {
+  obj.image = image.files[0];
+ }
+
  function checkCat(current, active) {
    console.log('current :', current);
    console.log('active :', active);
@@ -98,12 +102,19 @@ export function takeData(e){
       formData.append(key, obj[key]);
   })
   if(store.admin.token) {
-    newItemFetch(formData, store.admin.token).then(resData => {
-      console.log('resData', resData);
-      store.shopData = resData.products;
-      console.log('store :', store);
-      myGoods.innerHTML = renderAll(resData.products);
-    })
+    if(type === 'update') {
+      updateItem(obj, store.admin.token, editElemenId).then(resData => {
+        console.log('resData', resData);
+        
+      })
+    } else {
+      newItemFetch(formData, store.admin.token).then(resData => {
+        console.log('resData', resData);
+        store.shopData = resData.products;
+        console.log('store :', store);
+        myGoods.innerHTML = renderAll(resData.products);
+      })
+    }
 
   }
 
