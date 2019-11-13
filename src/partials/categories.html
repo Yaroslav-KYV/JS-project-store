@@ -29,7 +29,7 @@
   <!-- меню -->
   <section class="categories-shoes">
     <ul class="categories-menu">
-      <li class="categories-menu__item"><button class="categories-menu__button">All</button></li>
+      <li class="categories-menu__item"><button class="categories-menu__button active">All</button></li>
       <li class="categories-menu__item"><button class="categories-menu__button">Men</button></li>
       <li class="categories-menu__item"><button class="categories-menu__button">Women</button></li>
       <li class="categories-menu__item"><button class="categories-menu__button">Kids</button></li>
@@ -91,50 +91,53 @@
   </section>
 
   <!-- модальное окно подписки-->
-  <!-- <section class="signup-modal__wrapper">
+  <section class="signup-modal__wrapper">
     <div class="signup-modal">
       <a href="#" class="footer-nav__logo">
         <img src="../img/shopping-cart.svg" alt="">Sho<span class="logo-letter">e</span>Shop
       </a>
       <h2 class="signup-modal__h2">GET NEWS AND OFFERS FROM <br> SHOE SHOP</h2>
-      <p class="signup-modal__p">Sign up for emails and get special news and offers from the Shoe Shop family of brands,
+      <p class="signup-modal__text">Sign up for emails and get special news and offers from the Shoe Shop family of brands,
         including Jordan and Hurley.</p>
-      <form class="signup-modal_form" action="">
+
+      <form class="signup-modal_form" id="form_id" method="post" action="" onsubmit="javascript:return validate('form_id','email');">
         <label>
-          <p>Email address*</p>
-          <input class="signup-modal_email" type="text" name="" id="">
+          <p class="signup-modal__p">Email address*</p>
+          <input class="signup-modal_email" type="email" name="email" id="email" placeholder="Email address" required />
         </label>
 
-        <dev class="">
+        <div class="signup-modal_box">
           <label>
-            <p>Date of Birth*</p>
-            <input class="signup-modal_date" type="date" name="" id="">
+            <p class="signup-modal__p">Date of Birth*</p>
+            <input class="signup-modal_date" type="date" name="date" id="date" min="1950-01-01" max="2019-01-01" required>
           </label>
 
           <label>
-            <p>Shopping preference*</p>
-            <select class="signup-modal_preference" name="" id="">
+            <p class="signup-modal__p">Shopping preference</p>
+            <select class="signup-modal_preference" name="preference" id="preference">
               <option value="all">All</option>
               <option class="signup-modal_preference" value="men">Men</option>
               <option class="signup-modal_preference" value="women">Women</option>
               <option class="signup-modal_preference" value="kids">Kids</option>
             </select>
           </label>
-        </dev>
-        
+        </div>
+
         <button class="signup-modal__btn">SIGN UP</button>
       </form>
-      <p class="signup-modal__police">By signing up, you agree to Nike's Privacy Policy and Terms of Use.</p>
-      <button class="signup-modal__close">x</button>
+      
+      <p class="signup-modal__police">By signing up, you agree to Nike's <u>Privacy Policy</u> and <br> <u>Terms of Use</u>.</p>
+      <button class="signup-modal__close" >x</button>
     </div>
-  </section> -->
-  <!-- модальное окно -->
+  </section>
+
+  <!-- модальное окно visa-->
   <section class="footer-modal__wrapper">
-      <div class="footer-modal">
-        <h2 class="footer-modal__h2"></h2>
-        <p class="footer-modal__p"></p>
-        <button class="footer-modal__close">x</button>
-      </div>
-    </section>
+    <div class="footer-modal">
+      <h2 class="footer-modal__h2"></h2>
+      <p class="footer-modal__p"></p>
+      <button class="footer-modal__close">x</button>
+    </div>
+  </section>
 
 </div>

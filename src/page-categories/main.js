@@ -1,13 +1,15 @@
 import '../scss/main.scss';
 import './page.scss';
-import '../js/brandSlider.js'
-import '../js/visa.js'
+import '../js/brandSlider.js';
+import '../js/visa.js';
 import '../js/index';
 import '../js/cart.js';
 import { getShopData } from '../js/utils/api';
 import store from '../js/store';
 import { renderAll } from '../js/utils/helpers';
 import './rangeSlider';
+import '../js/signupModal';
+import '../js/callback';
 
 
 

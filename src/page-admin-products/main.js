@@ -1,4 +1,5 @@
 import '../scss/main.scss';
+import '../js/index';
 import './page.scss';
 import './login.scss';
 import { signIn } from '../js/utils/api';
@@ -110,9 +111,9 @@ export function takeData(e, type, editElemenId){
     } else {
       newItemFetch(formData, store.admin.token).then(resData => {
         console.log('resData', resData);
-        store.shopData = resData.products;
+        store.shopData = resData;
         console.log('store :', store);
-        myGoods.innerHTML = renderAll(resData.products);
+        myGoods.innerHTML = renderAll(resData);
       })
     }
 
