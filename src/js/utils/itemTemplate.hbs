@@ -1,0 +1,18 @@
+{{#each items}}
+<li>
+      <div class="item">
+        <div class="item_cart">
+          <button class="item_button">
+            Add to cart 
+          </button>
+        </div>
+        
+        <div class="item_imgContainer">
+        <img src="{{image}}" class="item_img" width="250px">
+      </div>
+        <p class="item_name">{{name}}</p>
+        <p class="item_desc">{{desc}}</p>
+        <p class="item_price">{{price}}</p>
+      </div>
+ </li>
+ {{/each}}
