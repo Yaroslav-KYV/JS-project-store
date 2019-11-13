@@ -16,9 +16,8 @@ button.addEventListener('click', (e) => {
     txt = userPhone.value;
     const api = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_id}&text=${txt}`
     fetch(`${api}`)
+
   };
 
   userPhone.value = '';
 })
-
-console.log('api', api)

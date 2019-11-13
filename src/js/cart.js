@@ -27,7 +27,7 @@ const updateTotalPrice = () => {
 
 /* Quantity items notifier for cart tag */
 const cartItemsNotifier = () => {
- 
+
     if (cartTag.classList.contains('cart__tag--isopen')) {
         cartNotifier.classList.remove('cart__tag__notifier--enabled');
     } else if (!cartTag.classList.contains('cart__tag--isopen') && localStorage.getItem('carts') && JSON.parse(localStorage.getItem('carts')).length > 0) {
@@ -66,9 +66,13 @@ const repaintCartContainer = () => {
             </svg>
         </li>`;
     }, '');
+
+  if(cartItems) {
     cartItems.innerHTML = stringPutToDom;
     document.querySelector('.cart__totalprice').textContent = totPrice;
     cartItemsNotifier();
+
+  }
 };
 
 /* exporting function to use it in addCart.js */
@@ -76,7 +80,7 @@ export const updateCartContainer = () => {
     repaintCartContainer();
 }
 
-/* add/remove class to Cart body container */ 
+/* add/remove class to Cart body container */
 const cartOpenClose = (event) => {
     if (event.target === cartTag || event.target === cartTagImage) {
         cartTag.classList.toggle('cart__tag--isopen');
@@ -84,7 +88,7 @@ const cartOpenClose = (event) => {
     }
 }
 
-/* this function contain methods to remove item/increase...decrease quantity */ 
+/* this function contain methods to remove item/increase...decrease quantity */
 const removeItem = (event) => {
     event.preventDefault();
     event.target.onmousedown = event.target.onselectstart = function() {
@@ -94,7 +98,7 @@ const removeItem = (event) => {
     let closestQuantityItem;
 
     if (event.target.dataset.but === 'remove' || event.target.parentNode.dataset.but === 'remove') {
-        
+
         store.cart.forEach((item, i) => {
             if (item._id === currentItem.dataset.id) {
                 store.cart.splice(i, 1);
@@ -106,44 +110,43 @@ const removeItem = (event) => {
             };
         updateCartContainer();
         });
-    } else 
-    
+    } else
+
     if (event.target.dataset.but === 'minus' || event.target.parentNode.dataset.but === 'minus') {
-        
+
         closestQuantityItem = event.target.closest('.quantity').querySelector('.cart__item__qty');
 
         store.cart.forEach((item) => {
             if (item._id === currentItem.dataset.id && item.quantity >= 2) {
                 item.quantity -= 1;
-                localStorage.setItem('carts', JSON.stringify(store.cart));   
+                localStorage.setItem('carts', JSON.stringify(store.cart));
                 closestQuantityItem.textContent = item.quantity;
                 updateTotalPrice();
 
             };
         });
-    } else 
-    
+    } else
+
     if (event.target.dataset.but === 'plus' || event.target.parentNode.dataset.but === 'plus') {
-        
+
         closestQuantityItem = event.target.closest('.quantity').querySelector('.cart__item__qty');
 
         store.cart.forEach((item) => {
             if (item._id === currentItem.dataset.id && item.quantity <= 98) {
                 item.quantity += 1;
-                localStorage.setItem('carts', JSON.stringify(store.cart));    
-                closestQuantityItem.textContent = item.quantity; 
-                updateTotalPrice(); 
-       
+                localStorage.setItem('carts', JSON.stringify(store.cart));
+                closestQuantityItem.textContent = item.quantity;
+                updateTotalPrice();
+
             };
         });
     };
-    
+
 };
 
-updateCartContainer();
 
-/* Listener for Cart Tag */ 
+/* Listener for Cart Tag */
 cartTag.addEventListener('click', cartOpenClose);
 
-/* Listener for Remove item ico */ 
+/* Listener for Remove item ico */
 cartItems.addEventListener('click', removeItem)

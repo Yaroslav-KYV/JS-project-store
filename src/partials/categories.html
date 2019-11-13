@@ -29,72 +29,63 @@
   <!-- меню -->
   <section class="categories-shoes">
     <ul class="categories-menu">
-      <li class="categories-menu__item"><button class="categories-menu__button">All</button></li>
+      <li class="categories-menu__item"><button class="categories-menu__button active">All</button></li>
       <li class="categories-menu__item"><button class="categories-menu__button">Men</button></li>
       <li class="categories-menu__item"><button class="categories-menu__button">Women</button></li>
       <li class="categories-menu__item"><button class="categories-menu__button">Kids</button></li>
     </ul>
 
-    <!-- поиск -->
-    <div class="search">
-      <form id="search-form" class="search-form">
-        <div class="block-div">
-          <div class="form-group">
-            <input name="input" class="form-control" type="text" placeholder="Search" />
-          </div>
-
-          <button type="submit" class="btn">Search</button>
+        <!-- поиск -->
+      <form id="search-form" class="search">
+        <div class="block-search">
+          <input name="input" class="form-control form-search" type="text" placeholder="Search" />
+          <button type="submit" class="btn" >Search</button>
         </div>
 
-        <div class="block-div">
+        <div class="block-options">
+
+           <div class="form-group">
+              <label for="make">Select Brand:</label>
+              <select name="brandName" class="form-control">
+                  <option value="all">All</option>
+                  <option value="Nike">Nike</option>
+                  <option value="Adidas">Adidas</option>
+              </select>
+           </div>
+
+           <div class="form-group">
+              <label for="model">Select Color:</label>
+              <select name ="color" class="form-control">
+                <option value="all">All</option>
+                <option value="White">White</option>
+                <option value="Pink">Pink</option>
+                <option value="Blue">Blue</option>
+                <option value="Green">Green</option>
+                <option value="Gray">Gray</option>
+                <option value="Black">Black</option>
+              </select>
+           </div>
+
           <div class="form-group">
-            <label for="make">
-              Select Brand:
-            </label>
-            <select name="brandName" id="make" data-filter="make" class="filter-make filter form-control">
-              <option value="all">All</option>
-              <option value="Nike">Nike</option>
-              <option value="Adidas">Adidas</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="model">
-              Select Color:
-            </label>
-            <select name="color" data-filter="model" class="filter-model filter form-control">
-              <option value="all">All</option>
-              <option value="White">White</option>
-              <option value="Pink">Pink</option>
-              <option value="Blue">Blue</option>
-              <option value="Red">Red</option>
-              <option value="Gray">Gray</option>
-              <option value="Black">Black</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="model">
-              Select Size:
-            </label>
-            <select name="size" data-filter="type" class="filter-type filter form-control">
-              <option value="all"> All</option>
-              <option value="36">36</option>
-              <option value="37">37</option>
-              <option value="38">38</option>
-              <option value="39">39</option>
-              <option value="40">40</option>
-              <option value="41">41</option>
-              <option value="42">42</option>
-              <option value="43">43</option>
-              <option value="44">44</option>
-              <option value="45">45</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <div id="range-slider"></div>
+            <label for="model">Select Size:</label>
+              <select name="size" class="form-control">
+                <option value="all">All</option>
+                <option value="36">36</option>
+                <option value="37">37</option>
+                <option value="38">38</option>
+                <option value="39">39</option>
+                <option value="40">40</option>
+                <option value="41">41</option>
+                <option value="42">42</option>
+                <option value="43">43</option>
+                <option value="44">44</option>
+                <option value="45">45</option>
+              </select>
           </div>
         </div>
+
+        <div class="range-price" id="range-slider"></div>
       </form>
-    </div>
 
     <div class="categories-array"></div>
   </section>

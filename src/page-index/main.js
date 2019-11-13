@@ -6,6 +6,7 @@ import '../js/visa';
 import { getShopData } from '../js/utils/api';
 import store from '../js/store';
 import { renderAll } from '../js/utils/helpers';
+import '../js/utils/headerSlider';
 
 
 

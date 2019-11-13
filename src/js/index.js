@@ -4,9 +4,7 @@ import './addToCart';
 
 
 getShopData().then(resData => {
-  console.log('resData', resData);
   store.shopData = resData;
-  console.log('store', store)
 });
 
 let toggled = false;
@@ -25,5 +23,7 @@ btn.onclick = function(evt) {
     document.body.style.overflow = "auto"
   }
 }
+
+
 
 
