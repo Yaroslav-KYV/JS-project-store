@@ -1,4 +1,5 @@
 import '../scss/main.scss';
+import '../js/index';
 import './page.scss';
 import './login.scss';
 import { signIn } from '../js/utils/api';
