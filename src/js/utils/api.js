@@ -32,7 +32,11 @@ export const newItemFetch = (formData, token) => {
         'Authorization': `Bearer ${token}`,
     },
     body: formData
-  }).then(res => res.json());
+  }).then(res => res.json()).then(resData => resData.products.map(el => {
+    el.image = serverURL + el.image;
+    el.quantity = 1;
+    return el
+  }));
 
 }
 
