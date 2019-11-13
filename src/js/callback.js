@@ -7,11 +7,12 @@ const token = '1066699751:AAHO2hGHCBm148lTSEL3Kk61lTtLlyiopz4';
 const chat_id = '-271320444';
 let txt;
 
+console.log('txt', txt)
 button.addEventListener('click', (e) => {
 	
   e.preventDefault();
 
-  if (userPhone.value !== '' && Number(userPhone.value) && userPhone.value >= '5') {
+  if (userPhone.value !== '' && Number(userPhone.value)) {
     txt = userPhone.value;
     const api = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_id}&text=${txt}`
     fetch(`${api}`)
@@ -19,3 +20,5 @@ button.addEventListener('click', (e) => {
 
   userPhone.value = '';
 })
+
+console.log('api', api)
