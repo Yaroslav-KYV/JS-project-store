@@ -1,9 +1,11 @@
 export default {
   shopData: [],
   cart: [],
-  categoriesFilter: {},
+  categoriesFilter: {
+    range: [50, 600]
+  },
   admin: {
     auth: false,
-  }
-  
+  },
+
 }

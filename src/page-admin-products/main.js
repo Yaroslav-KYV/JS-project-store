@@ -106,7 +106,7 @@ export function takeData(e, type, editElemenId){
     if(type === 'update') {
       updateItem(obj, store.admin.token, editElemenId).then(resData => {
         console.log('resData', resData);
-        
+
       })
     } else {
       newItemFetch(formData, store.admin.token).then(resData => {
@@ -114,11 +114,11 @@ export function takeData(e, type, editElemenId){
         store.shopData = resData;
         console.log('store :', store);
         myGoods.innerHTML = renderAll(resData);
+        e.target.reset();
       })
     }
 
   }
-
 }
 
 
