@@ -53,7 +53,7 @@ brandName.addEventListener('submit', (e) => {
   const filteredArr = store.shopData.filter((el) => (!input.value !== '' ? el.name.toLowerCase().includes(input.value.toLowerCase()) : true)
   && (brandNameValue !== 'all' ? el.brandName === brandNameValue : true)
   && (sizeValue !== 'all' ? el.size === +sizeValue : true)
-  && (colorValue !== 'all' ? el.color === colorValue : true)
+  && (colorValue !== 'all' ? el.color.includes(colorValue) : true)
   && (el.price >= priceMin && el.price <= priceMax))
   console.log('filteredArr', filteredArr)
   categoriesArray.innerHTML = renderAll(filteredArr);

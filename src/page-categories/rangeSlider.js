@@ -239,7 +239,8 @@ class RangeSlider {
 const app = document.getElementById('range-slider');
 const rangeSlider = new RangeSlider({
   lowValue: 50,
-  highValue: 150,
+  highValue: 600,
+  max: 1200,
   onChange: _.debounce(((data)=> {
     console.log('data', data)
     store.categoriesFilter.range = data;

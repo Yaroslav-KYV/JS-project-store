@@ -1,6 +1,6 @@
 import shopData from '../shoes.js';
 
-const server = 'http://myshop.com.ua'
+const server = 'https://nike-store.herokuapp.com'
 const serverURL =
       window.location.hostname.indexOf('localhost') !== -1
         ? 'http://localhost:3000'
