@@ -1,12 +1,12 @@
 import shopData from '../shoes.js';
 
-const server = 'https://nike-store.herokuapp.com'
+const server = window.location.origin;
 const serverURL =
       window.location.hostname.indexOf('localhost') !== -1
         ? 'http://localhost:3000'
         : server;
 export const getShopData = () => {
-  return fetch('http://localhost:3000/api/products').then(res => res.json()).then(resData => resData.products.map(el => {
+  return fetch(`${serverURL}/shopapi/products`).then(res => res.json()).then(resData => resData.products.map(el => {
     el.image = serverURL + el.image;
     el.quantity = 1;
     return el
@@ -16,7 +16,7 @@ export const getShopData = () => {
 
 
 export const signIn = (userData) => {
-  return fetch('http://localhost:3000/api/auth/signin', {
+  return fetch(`${serverURL}/shopapi/auth/signin`, {
     method: 'POST',
     headers: {
         'content-type': 'application/json',
@@ -26,7 +26,7 @@ export const signIn = (userData) => {
 }
 
 export const newItemFetch = (formData, token) => {
-  return fetch('http://localhost:3000/api/products', {
+  return fetch(`${serverURL}/shopapi/products`, {
     method: 'POST',
     headers: {
         'Authorization': `Bearer ${token}`,
@@ -42,7 +42,7 @@ export const newItemFetch = (formData, token) => {
 
 
 export const updateItem = (data, token,editElemenId) => {
-return fetch(`http://localhost:3000/api/products/${editElemenId}`, {
+return fetch(`${serverURL}/shopapi/products/${editElemenId}`, {
     method: 'PUT',
     headers: {
         'Authorization': `Bearer ${token}`,
@@ -54,7 +54,7 @@ return fetch(`http://localhost:3000/api/products/${editElemenId}`, {
 }
 
 export const deleteItem = (id, token) => {
-  return fetch(`http://localhost:3000/api/products/${id}`, {
+  return fetch(`${serverURL}/shopapi/products/${id}`, {
     method: 'DELETE',
     headers: {
         'Authorization': `Bearer ${token}`,
